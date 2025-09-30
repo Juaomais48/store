@@ -1,6 +1,6 @@
 function showProducts(category) {
 
-    const header = document.querySelector('.header');
+    const header = document.querySelector('.page-header');
     if (header) {
         header.remove();
     }
@@ -384,10 +384,7 @@ function getProductData(productMain, product = null) {
 }
 
 // Inicialização dos botões de compra
-document.addEventListener('DOMContentLoaded', function() {
-    // Exibir primeira categoria por padrão
-    showProducts('genshin');
-    
+document.addEventListener('DOMContentLoaded', function() {   
     // Adicionar event listeners para TODOS os botões de compra
     const allBuyButtons = document.querySelectorAll('.buy-btn');
     allBuyButtons.forEach(button => {
