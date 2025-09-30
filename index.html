@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojinha do Juão | Preço baixo e satisfação</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">Juão Store</div>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" onclick="openPopup()">Contato</a>
+                <a href="page/functions.html">Funções dos Cheats</a>
+                <a href="page/faq.html">FAQ</a>
+                <a href="page/terms.html">Termos</a>
+            </nav>
+        </div>
+    </header>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="contact-container">
+            <button class="close-btn" onclick="closePopup()">&times;</button>
+            <div class="profile-section">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <h2>Juãomais48</h2>
+                    <p>𝐇𝐨𝐰 𝐛𝐚𝐝 𝐝𝐨 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐦𝐞?</p>
+                    <div class="status-badge">
+                        <div class="status-dot"></div>
+                        Online
+                    </div>
+                    <div class="verify-badge">
+                        <div class="verify-dot"></div>
+                        Verificado
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://discord.gg/4vpZnvph" target="_blank" class="discord-button">
+                <svg class="discord-icon" viewBox="0 0 24 24">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+                Iniciar Chat no Discord
+            </a>
+
+            <div class="contact-info">
+                <p>Entre em contato para:</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <strong>Suporte</strong>
+                        Ajuda técnica rápida
+                    </div>
+                    <div class="feature">
+                        <strong>Vendas</strong>
+                        Dúvidas sobre produtos
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay" id="checkoutPopup">
+        <div class="checkout-container">
+            <button class="close-btn" onclick="closeCheckout()">&times;</button>
+            <h2>Finalizar Compra</h2>
+            
+            <div class="checkout-product">
+                <img id="checkoutImage" src="" alt="Produto">
+                <div class="checkout-info">
+                    <div class="checkout-name" id="checkoutName"></div>
+                    <div class="checkout-duration" id="checkoutDuration"></div>
+                    <div class="checkout-price" id="checkoutPrice"></div>
+                </div>
+            </div>
+
+            <div class="checkout-instructions">
+                <p>Para finalizar sua compra, entre em contato comigo <strong style="color: #7580ff; font-weight: 700;">@Juaomais48</strong> no Discord informando:</p>
+                <ul>
+                    <li>O produto que deseja comprar</li>
+                    <li>A duração selecionada (se aplicável)</li>
+                    <li>Sua forma de pagamento preferida</li>
+                </ul>
+            </div>
+
+            <a href="https://discord.gg/4vpZnvph" target="_blank" class="checkout-discord-btn">
+                <svg class="discord-icon" viewBox="0 0 24 24">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+                Comprar via Discord
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Boas vindas à Lojinha do Juão</h1>
+            <p>Aqui você vai encontrar Gemas, Jades, Passes e Bençãos e os mais completos Cheats, com funções que vão fazer sua gameplay ficar mais fácil e dinâmica.</p>
+        </div>
+
+        <div class="categories">
+            <div class="category-card genshin" onclick="showProducts('genshin')">
+                <h3>Genshin Impact</h3>
+                <p>Explore Teyvat com estilo</p>
+            </div>
+            <div class="category-card starrail" onclick="showProducts('starrail')">
+                <h3>Honkai: Star Rail</h3>
+                <p>Jornada pelas estrelas</p>
+            </div>
+            <div class="category-card wuwa" onclick="showProducts('wuwa')">
+                <h3>Wuthering Waves</h3>
+                <p>Ondas de aventura</p>
+            </div>
+            <div class="category-card zzz" onclick="showProducts('zzz')">
+                <h3>Zenless Zone Zero</h3>
+                <p>Estilo urbano futurista</p>
+            </div>
+        </div>
+
+        <!-- Genshin Impact Products -->
+        <div id="genshin" class="products-section">
+            <div class="product-lists">
+                <div class="product-list">
+                    <h4>Cristais Gênesis</h4>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/q6p2jzH/60cristais.png" alt="60cristais">
+                            <div class="product-info">
+                                <div class="product-name">60 Cristais</div>
+                                <div class="product-bonus">+ 60 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 4,90</div> 
+                                <div class="product-price">R$ 4,30</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/q3X493sS/300cristais.png" alt="300cristais">
+                            <div class="product-info">
+                                <div class="product-name">300 Cristais</div>
+                                <div class="product-bonus">+ 300 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 25,90</div> 
+                                <div class="product-price">R$ 20,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/NzYtkRg/980cristais.png" alt="980cristais">
+                            <div class="product-info">
+                                <div class="product-name">980 Cristais</div>
+                                <div class="product-bonus">+ 980 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 76,90</div>
+                                <div class="product-price">R$ 61,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/hJfmRw1Q/1980cristais.png" alt="1980cristais">
+                            <div class="product-info">
+                                <div class="product-name">1.980 Cristais</div>
+                                <div class="product-bonus">+ 1.980 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 154,90</div> 
+                                <div class="product-price">R$ 124,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/XZcfWgGz/3280cristais.png" alt="3280cristais">
+                            <div class="product-info">
+                                <div class="product-name">3.280 Cristais</div>
+                                <div class="product-bonus">+ 3.280 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 254,90</div> 
+                                <div class="product-price">R$ 200,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/GQ0zQhq3/6480cristais.png" alt="6480cristais">
+                            <div class="product-info">
+                                <div class="product-name">6.480 Cristais</div>
+                                <div class="product-bonus">+ 6.480 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 499,90</div> 
+                                <div class="product-price">R$ 400,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/HpBdsWn9/money.gif" alt="money">
+                            <div class="product-info">
+                                <div class="product-name">15.680 Cristais</div>
+                                <div class="product-bonus">+ 15.680 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 1.017,40</div>
+                                <div class="product-price">R$ 800,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-list">
+                    <h4>Passes e Bençãos</h4>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/gLGqYbv9/bencao.png" alt="bencao">
+                            <div class="product-info">
+                                <div class="product-name">Benção da Lua Nova</div>
+                                <div class="product-old-price">R$ 25,90</div> 
+                                <div class="product-price">R$ 20,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-old-price">R$ 25,90</span>
+                                        <span class="duration-price">R$ 20,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">60 dias</span>
+                                        <span class="duration-old-price">R$ 51,80</span>
+                                        <span class="duration-price">R$ 43,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">90 dias</span>
+                                        <span class="duration-old-price">R$ 77,70</span>
+                                        <span class="duration-price">R$ 64,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">120 dias</span>
+                                        <span class="duration-old-price">R$ 103,60</span>
+                                        <span class="duration-price">R$ 86,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">150 dias</span>
+                                        <span class="duration-old-price">R$ 129,50</span>
+                                        <span class="duration-price">R$ 105,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">180 dias</span>
+                                        <span class="duration-old-price">R$ 155,40</span>
+                                        <span class="duration-price">R$ 123,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/4nkc4ZV3/hino2.png" alt="hino2">
+                            <div class="product-info">
+                                <div class="product-name">Hino Gnóstico</div>
+                                <div class="product-old-price">R$ 49,90</div> 
+                                <div class="product-price">R$ 42,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/XZs7mJSK/coro1.png" alt="coro1">
+                            <div class="product-info">
+                                <div class="product-name">Coro Gnóstico</div>
+                                <div class="product-old-price">R$ 99,90</div> 
+                                <div class="product-price">R$ 81,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/kVk0Jwq4/coroUP.png" alt="coroUP">
+                            <div class="product-info">
+                                <div class="product-name">UP de Hino para Coro</div>
+                                <div class="product-old-price">R$ 49,90</div> 
+                                <div class="product-price">R$ 42,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-list">
+                    <h4>Hacks e Bypass</h4>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/xSqN3FFW/shika.gif" alt="shika">
+                            <div class="product-info">
+                                <div class="product-name">Menu Shika</div>
+                                <div class="product-price">R$ 30,00</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a versão que deseja:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">Shika Beta - Vitalício</span>
+                                        <span class="duration-price">R$ 30,00</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">Shika Alpha - Vitalício</span>
+                                        <span class="duration-price">R$ 350,00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/4wjFF2By/uni.png" alt="uni">
+                            <div class="product-info">
+                                <div class="product-name">Menu UniCore</div>
+                                <div class="product-price">R$ 16,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">2 dias</span>
+                                        <span class="duration-price">R$ 16,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">7 dias</span>
+                                        <span class="duration-price">R$ 38,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-price">R$ 79,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/4ZdYnFPh/slash.png" alt="slash">
+                            <div class="product-info">
+                                <div class="product-name">Slash Bypass</div>
+                                <div class="product-price">R$ 21,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">3 dias</span>
+                                        <span class="duration-price">R$ 21,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">7 dias</span>
+                                        <span class="duration-price">R$ 32,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-price">R$ 53,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Star Rail Products -->
+        <div id="starrail" class="products-section">
+            <div class="product-lists">
+                <div class="product-list">
+                    <h4>Fragmentos Oníricos</h4>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/GfwF3ndR/60fragmentos.png" alt="60fragmentos">
+                            <div class="product-info">
+                                <div class="product-name">60 Fragmentos</div>
+                                <div class="product-bonus">+ 60 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 4,90</div> 
+                                <div class="product-price">R$ 4,60</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/b5t6pYNc/300fragmentos.png" alt="300fragmentos">
+                            <div class="product-info">
+                                <div class="product-name">300 Fragmentos</div>
+                                <div class="product-bonus">+ 300 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 24,90</div> 
+                                <div class="product-price">R$ 22,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/99tWf0Tt/980fragmentos.png" alt="980fragmentos">
+                            <div class="product-info">
+                                <div class="product-name">980 Fragmentos</div>
+                                <div class="product-bonus">+ 980 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 79,90</div> 
+                                <div class="product-price">R$ 66,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/mrggYypC/1980gragmentos.png" alt="1980gragmentos">
+                            <div class="product-info">
+                                <div class="product-name">1.980 Fragmentos</div>
+                                <div class="product-bonus">+ 1.980 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 149,90</div> 
+                                <div class="product-price">R$ 136,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/0725dVy/3280fragmentos.png" alt="3280fragmentos">
+                            <div class="product-info">
+                                <div class="product-name">3.280 Fragmentos</div>
+                                <div class="product-bonus">+ 3.280 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 249,90</div> 
+                                <div class="product-price">R$ 226,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/2YcRJDX6/6480fragmentos.png" alt="6480fragmentos">
+                            <div class="product-info">
+                                <div class="product-name">6.480 Fragmentos</div>
+                                <div class="product-bonus">+ 6.480 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 499,90</div> 
+                                <div class="product-price">R$ 456,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-main">
+                            <img src="https://i.ibb.co/M5sVTJyN/aventurine.gif" alt="aventurine">
+                            <div class="product-info">
+                                <div class="product-name">15.680 Fragmentos</div>
+                                <div class="product-bonus">+ 15.680 na Primeira Recarga</div>
+                                <div class="product-old-price">R$ 1009,40</div> 
+                                <div class="product-price">R$ 880,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-list">
+                    <h4>Passes e Suprimentos</h4>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/XkWBJKWH/suprimento.png" alt="suprimento">
+                            <div class="product-info">
+                                <div class="product-name">Suprimento do Expresso</div>
+                                <div class="product-old-price">R$ 24,90</div> 
+                                <div class="product-price">R$ 22,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-old-price">R$ 24,90</span>
+                                        <span class="duration-price">R$ 22,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">60 dias</span>
+                                        <span class="duration-old-price">R$ 49,80</span>
+                                        <span class="duration-price">R$ 45,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">90 dias</span>
+                                        <span class="duration-old-price">R$ 74,70</span>
+                                        <span class="duration-price">R$ 68,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">120 dias</span>
+                                        <span class="duration-old-price">R$ 99,60</span>
+                                        <span class="duration-price">R$ 88,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">150 dias</span>
+                                        <span class="duration-old-price">R$ 124,50</span>
+                                        <span class="duration-price">R$ 110,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">180 dias</span>
+                                        <span class="duration-old-price">R$ 149,40</span>
+                                        <span class="duration-price">R$ 136,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-list">
+                    <h4>Hacks e Bypass</h4>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/4wjFF2By/uni.png" alt="uni">
+                            <div class="product-info">
+                                <div class="product-name">Menu UniStar</div>
+                                <div class="product-price">R$ 11,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">2 dias</span>
+                                        <span class="duration-price">R$ 11,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">7 dias</span>
+                                        <span class="duration-price">R$ 27,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-price">R$ 55,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wuthering Waves Products -->
+        <div id="wuwa" class="products-section">
+            <div class="product-lists">
+                <div class="product-list">
+                    <h4>Lunites</h4>
+                    <div class="product-none">
+                        <p>Em Breve.</p>
+                    </div>
+                </div>
+                
+                <div class="product-list">
+                    <h4>Passes e Assinaturas</h4>
+                    <div class="product-none">
+                        <p>Em Breve.</p>
+                    </div>
+                </div>
+                
+                <div class="product-list">
+                    <h4>Hacks e Bypass</h4>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/4wjFF2By/uni.png" alt="uni">
+                            <div class="product-info">
+                                <div class="product-name">Menu UniWaves</div>
+                                <div class="product-price">R$ 16,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">2 dias</span>
+                                        <span class="duration-price">R$ 16,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">7 dias</span>
+                                        <span class="duration-price">R$ 38,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-price">R$ 79,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/VcHz3kxF/kitten.gif" alt="kitten">
+                            <div class="product-info">
+                                <div class="product-name">Menu KittenWaves</div>
+                                <div class="product-price">R$ 139,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Somente uma opção dispoível:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">KittenWaves - Vitalício</span>
+                                        <span class="duration-price">R$ 139,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/4ZdYnFPh/slash.png" alt="slash">
+                            <div class="product-info">
+                                <div class="product-name">Slash Bypass</div>
+                                <div class="product-price">R$ 21,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">3 dias</span>
+                                        <span class="duration-price">R$ 21,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">7 dias</span>
+                                        <span class="duration-price">R$ 32,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-price">R$ 53,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zenless Zone Zero Products -->
+        <div id="zzz" class="products-section">
+            <div class="product-lists">
+                <div class="product-list">
+                    <h4>Monocromos</h4>
+                    <div class="product-none">
+                        <p>Em Breve.</p>
+                    </div>
+                </div>
+                
+                <div class="product-list">
+                    <h4>Passes e Assinaturas</h4>
+                    <div class="product-none">
+                        <p>Em Breve.</p>
+                    </div>
+                </div>
+                
+                <div class="product-list">
+                    <h4>Hacks e Bypass</h4>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/4wjFF2By/uni.png" alt="uni">
+                            <div class="product-info">
+                                <div class="product-name">Menu UniZone</div>
+                                <div class="product-price">R$ 16,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">2 dias</span>
+                                        <span class="duration-price">R$ 16,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">7 dias</span>
+                                        <span class="duration-price">R$ 38,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-price">R$ 79,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product has-tray">
+                        <div class="product-main">
+                            <div class="tray-indicator"></div>
+                            <img src="https://i.ibb.co/4ZdYnFPh/slash.png" alt="slash">
+                            <div class="product-info">
+                                <div class="product-name">Slash Bypass</div>
+                                <div class="product-price">R$ 21,90</div>
+                            </div>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                        <div class="product-tray">
+                            <div class="tray-content">
+                                <div class="tray-title">Escolha a duração do acesso:</div>
+                                <div class="duration-options">
+                                    <div class="duration-option">
+                                        <span class="duration-text">3 dias</span>
+                                        <span class="duration-price">R$ 21,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">7 dias</span>
+                                        <span class="duration-price">R$ 32,90</span>
+                                    </div>
+                                    <div class="duration-option">
+                                        <span class="duration-text">30 dias</span>
+                                        <span class="duration-price">R$ 53,90</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer footer-margin160">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" onclick="openPopup()">Contato</a>
+                <a href="page/functions.html">Funções dos Cheats</a>
+                <a href="page/faq.html">FAQ</a>
+                <a href="page/terms.html">Termos</a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Juão Store. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+     
+    <script src="assets/js/script.js"></script>    
+</body>
+</html>

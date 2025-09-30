@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções dos Cheats | Juão Store</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">Juão Store</div>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="../index.html" class="back-btn">← Voltar à Loja</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Funções dos Cheats</h1>
+            <p>Explore as funcionalidades completas de cada menu disponível em nossa loja</p>
+        </div>
+
+        <div id="cheat-target-direct"></div>
+
+        <!-- Cheat Categories -->
+        <div class="cheat-categories">
+            <div class="cheat-btn" onclick="showSubcategories('uni')">
+                <h3>Uni</h3>
+                <p>Multi-jogos</p>
+            </div>
+            <div class="cheat-btn" onclick="showSubcategories('shika')">
+                <h3>Shika</h3>
+                <p>Genshin Impact</p>
+            </div>
+            <div class="cheat-btn" onclick="showCheatDirect('kitten')">
+                <h3>KittenWaves</h3>
+                <p>Wuthering Waves</p>
+            </div>
+            <div class="cheat-btn" onclick="showCheatDirect('slash')">
+                <h3>Slash Bypass</h3>
+                <p>Multi-jogos</p>
+            </div>
+        </div>
+
+        <div id="cheat-target"></div>
+
+        <!-- Uni Subcategories -->
+        <div id="uni-subcategories" class="subcategories">
+            <div class="subcategory-btn" onclick="showCheat('unicore')">
+                <h3>UniCore</h3>
+                <p>Genshin Impact</p>
+            </div>
+            <div class="subcategory-btn" onclick="showCheat('unizone')">
+                <h3>UniZone</h3>
+                <p>Zenless Zone Zero</p>
+            </div>
+            <div class="subcategory-btn" onclick="showCheat('uniwaves')">
+                <h3>UniWaves</h3>
+                <p>Wuthering Waves</p>
+            </div>
+            <div class="subcategory-btn" onclick="showCheat('unistar')">
+                <h3>UniStar</h3>
+                <p>Honkai: Star Rail</p>
+            </div>
+        </div>
+
+        <!-- Shika Subcategories -->
+        <div id="shika-subcategories" class="subcategories">
+            <div class="subcategory-btn" onclick="showCheat('shikabeta')">
+                <h3>Shika Beta</h3>
+                <p>Genshin Impact</p>
+            </div>
+            <div class="subcategory-btn" onclick="showCheat('shikaalpha')">
+                <h3>Shika Alpha</h3>
+                <p>Genshin Impact</p>
+            </div>
+        </div>
+
+        <!-- UniCore Content -->
+        <div id="unicore" class="cheat-content">
+            <div class="cheat-info">
+                <h2>Menu UniCore - Genshin Impact</h2>
+                <p><strong>Status:</strong> 🟢 Atualizado</p>
+                <p><strong>Proteção:</strong> 🟡 UEFI + Hypervisor | Em testes.</p>
+            </div>
+
+            <div class="feature-categories">
+                <div class="feature-category">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="category-icon">
+                                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                            </svg>
+
+                            Funções do Jogador
+                        </h3>
+                        <div class="expand-icon">+</div>
+                    </div>
+                    <div class="category-content">
+                        <div class="category-content-inner">
+                            <ul class="feature-list">
+                                <li><strong>Stamina Infinita:</strong> Stamina ilimitada para correr e escalar</li>
+                                <li><strong>No Clip:</strong> Atravesse paredes como se não estivessem ali</li>
+                                <li><strong>God Mode:</strong> Imunidade total a danos de inimigos</li>
+                                <li><strong>Sem Dano de Queda:</strong> Elimine completamente o dano de queda</li>
+                                <li><strong>Tranparência do Personagem:</strong> Modifique efeitos de transparência do seu personagem</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-category">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="category-icon">
+                                <path fill-rule="evenodd" d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z" clip-rule="evenodd" />
+                            </svg>
+
+                            Funções de Combate
+                        </h3>
+                        <div class="expand-icon">+</div>
+                    </div>
+                    <div class="category-content">
+                        <div class="category-content-inner">
+                            <ul class="feature-list">
+                                <li><strong>Kill Aura:</strong> Mata instantaneamente sem esforço inimigos a sua volta</li>
+                                <li><strong>Atirar Rapidametne:</strong> Aumenta a velocidade de ataque dos arqueiros</li>
+                                <li><strong>Dano em Área:</strong> Transforma qualquer dano de alvo unico em ataque em área</li>
+                                <li><strong>Multiplicador de Dano:</strong> Aumenta a quantidade de vezes que o dano é aplicado</li>
+                                <li><strong>Redução de Recarga:</strong> Permite usar habilidades antes do tempo de recarga</li>
+                                <li><strong>Ultimate Infinita:</strong> Remove o requisito de energia para lançar ultmates</li>
+                                <li><strong>Matgnetizar:</strong> Puxa os inimigos distantes até você</li>
+                                <li><strong>Conjelar:</strong> Para todos os inimigos no tempo</li>
+                                <li><strong>Inimigos Burros:</strong> Desliga a inteligencia dos inimigos evitando que eles ataquem</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-category">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="category-icon">
+                                <path d="M15.75 8.25a.75.75 0 0 1 .75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 1 1-.992-1.124A2.243 2.243 0 0 0 15 9a.75.75 0 0 1 .75-.75Z" />
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM4.575 15.6a8.25 8.25 0 0 0 9.348 4.425 1.966 1.966 0 0 0-1.84-1.275.983.983 0 0 1-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 0 1 2.328-.377L16.5 15h.628a2.25 2.25 0 0 1 1.983 1.186 8.25 8.25 0 0 0-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.575 15.6Z" clip-rule="evenodd" />
+                            </svg>
+                            Funções de Mundo
+                        </h3>
+                        <div class="expand-icon">+</div>
+                    </div>
+                    <div class="category-content">
+                        <div class="category-content-inner">
+                            <ul class="feature-list">
+                                <li><strong>Auto Seelies:</strong> Faça as Seelies retornarem aos seus locais por si só</li>
+                                <li><strong>Teleporte Personalizado:</strong> Teleporte para pontos definidos por arquivos e listas de TP</li>
+                                <li><strong>Teleporte Rápido:</strong> Teleporte sem tela de carregamento</li>
+                                <li><strong>Teleporte no Mapa:</strong> Use o mapa para teleportar em qualquer ponto que seu Mouse estiver</li>
+                                <li><strong>Teleporte em Missões:</strong> Teleporta para a onde a missão atual indica</li>
+                                <li><strong>ESP:</strong> Crie traçados que localizam e apontam itens, endidades, baús e mais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-category">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="category-icon">
+                                <path fill-rule="evenodd" d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z" clip-rule="evenodd" />
+                            </svg>
+                            Funções Utilitárias
+                        </h3>
+                        <div class="expand-icon">+</div>
+                    </div>
+                    <div class="category-content">
+                        <div class="category-content-inner">
+                            <ul class="feature-list">
+                                <li><strong>Auto Diálogo:</strong> Seleciona automaticamente opções de diálogo</li>
+                                <li><strong>Acelerar Diálogo:</strong> Acelera a velocidade que os diálogos são lidos</li>
+                                <li><strong>Skipar Diálogo:</strong> Pula variadas origens de diálogos eliminando falas desnecessarias</li>
+                                <li><strong>Skipar Cutscenes:</strong> Pula variadas origens de cenematicas durante a hisória</li>
+                                <li><strong>Modificar Fov:</strong> Aumenta seu Campo de Visão</li>
+                                <li><strong>Esconder UID:</strong> Remove o UID da tela</li>
+                                <li><strong>Personalizar UID:</strong> Modifique seu UID para um texto próprio</li>
+                                <li><strong>Desbloquear FPS:</strong> Rode o jogo fora do limite de 60 quadros</li>
+                                <li><strong>Alterar Tempo:</strong> Permite mudar para dia e noite, chuva ou céu limpo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight important">
+                <p>⚠️ Aviso: Use com responsabilidade. Embora o UniCore possua sistemas anti-detecção avançados, o uso de qualquer modificação envolve riscos. Recomendamos uso moderado e evitar comportamentos muito óbvios durante gameplay online.</p>
+            </div>
+        </div>
+
+        <div id="unizone" class="cheat-content">
+            <div class="cheat-info">
+                <h2>Menu UniZone - Zenless Zone Zero</h2>
+                <p><strong>Status:</strong> 🟢 Atualizado</p>
+                <p><strong>Proteção:</strong> 🟢 Sem banimentos reportados.</p>
+            </div>
+            <div class="cheat-info">
+                <p style="text-align: center; font-size: 1.2rem; margin-top: 20px; color: #9ca3af;">
+                    🚧 Em desenvolvimento - Em breve disponível! 🚧
+                </p>
+            </div>
+            <div class="highlight important">
+                <p>⚠️ Aviso: Use com responsabilidade. Embora o UniZone possua sistemas anti-detecção avançados, o uso de qualquer modificação envolve riscos. Recomendamos uso moderado e evitar comportamentos muito óbvios durante gameplay online.</p>
+            </div>
+        </div>
+
+        <div id="uniwaves" class="cheat-content">
+            <div class="cheat-info">
+                <h2>Menu UniWaves - Wuthering Waves</h2>
+                <p><strong>Status:</strong> 🟢 Atualizado</p>
+                <p><strong>Proteção:</strong> 🟢 Sem banimentos reportados.</p>
+            </div>
+            <div class="cheat-info">
+                <p style="text-align: center; font-size: 1.2rem; margin-top: 20px; color: #9ca3af;">
+                    🚧 Em desenvolvimento - Em breve disponível! 🚧
+                </p>
+            </div>
+            <div class="highlight important">
+                <p>⚠️ Aviso: Use com responsabilidade. Embora o UniWaves possua sistemas anti-detecção avançados, o uso de qualquer modificação envolve riscos. Recomendamos uso moderado e evitar comportamentos muito óbvios durante gameplay online.</p>
+            </div>
+        </div>
+
+        <div id="unistar" class="cheat-content">
+            <div class="cheat-info">
+                <h2>Menu UniStar - Honkai: Star Rail</h2>
+                <p><strong>Status:</strong> 🟢 Atualizado</p>
+                <p><strong>Proteção:</strong> 🟢 Sem banimentos reportados.</p>
+            </div>
+            <div class="cheat-info">
+                <p style="text-align: center; font-size: 1.2rem; margin-top: 20px; color: #9ca3af;">
+                    🚧 Em desenvolvimento - Em breve disponível! 🚧
+                </p>
+            </div>
+            <div class="highlight important">
+                <p>⚠️ Aviso: Use com responsabilidade. Embora o UniStar possua sistemas anti-detecção avançados, o uso de qualquer modificação envolve riscos. Recomendamos uso moderado e evitar comportamentos muito óbvios durante gameplay online.</p>
+            </div>
+        </div>
+
+        <div id="kitten" class="cheat-content">
+            <div class="cheat-info">
+                <h2>Menu KittenWaves - Wuthering Waves</h2>
+                <p><strong>Status:</strong> 🟡 Em Atualização</p>
+                <p><strong>Proteção:</strong> 🟢 Sem banimentos reportados.</p>
+            </div>
+            <div class="cheat-info">
+                <p style="text-align: center; font-size: 1.2rem; margin-top: 20px; color: #9ca3af;">
+                    🚧 Em desenvolvimento - Em breve disponível! 🚧
+                </p>
+            </div>
+            <div class="highlight important">
+                <p>⚠️ Aviso: Use com responsabilidade. Embora o KittenWaves possua sistemas anti-detecção avançados, o uso de qualquer modificação envolve riscos. Recomendamos uso moderado e evitar comportamentos muito óbvios durante gameplay online.</p>
+            </div>
+        </div>
+
+        <div id="shikabeta" class="cheat-content">
+            <div class="cheat-info">
+                <h2>Menu Shika Beta - Genshin Impact</h2>
+                <p><strong>Status:</strong> 🟢 Atualizado</p>
+                <p><strong>Proteção:</strong> 🔴 Banimentos recentemente remortados.</p>
+            </div>
+            <div class="cheat-info">
+                <p style="text-align: center; font-size: 1.2rem; margin-top: 20px; color: #9ca3af;">
+                    🚧 Em desenvolvimento - Em breve disponível! 🚧
+                </p>
+            </div>
+            <div class="highlight important">
+                <p>⚠️ Aviso: Use com responsabilidade. Embora o Shika Beta possua sistemas anti-detecção avançados, o uso de qualquer modificação envolve riscos. Recomendamos uso moderado e evitar comportamentos muito óbvios durante gameplay online.</p>
+            </div>
+        </div>
+
+        <div id="shikaalpha" class="cheat-content">
+            <div class="cheat-info">
+                <h2>Menu Shika Alpha - Genshin Impact</h2>
+                <p><strong>Status:</strong> 🟢 Atualizado</p>
+                <p><strong>Proteção:</strong> 🟢 Sem banimentos reportados.</p>
+            </div>
+            <div class="cheat-info">
+                <p style="text-align: center; font-size: 1.2rem; margin-top: 20px; color: #9ca3af;">
+                    🚧 Em desenvolvimento - Em breve disponível! 🚧
+                </p>
+            </div>
+            <div class="highlight important">
+                <p>⚠️ Aviso: Use com responsabilidade. Embora o Shika Alpha possua sistemas anti-detecção avançados, o uso de qualquer modificação envolve riscos. Recomendamos uso moderado e evitar comportamentos muito óbvios durante gameplay online.</p>
+            </div>
+        </div>
+
+        <div id="slash" class="cheat-content">
+            <div class="cheat-info">
+                <h2>Menu Slash Bypass - Multi-jogos</h2>
+                <p><strong>Status:</strong> 🟢 Atualizado</p>
+                <p><strong>Proteção:</strong> 🟢 Aprimora a segurança client-side.</p>
+            </div>
+            <div class="cheat-info">
+                <p style="text-align: center; font-size: 1.2rem; margin-top: 20px; color: #9ca3af;">
+                    🚧 Em desenvolvimento - Em breve disponível! 🚧
+                </p>
+            </div>
+            <div class="highlight important">
+                <p>⚠️ Aviso: Use com responsabilidade. Embora o Slash Bypass aprimore sistemas anti-detecção client-side, o uso de qualquer modificação envolve riscos. Recomendamos uso moderado e evitar comportamentos muito óbvios durante gameplay online.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer footer-margin300">
+        <div class="footer-content">
+            <p>&copy; 2025 Juão Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>   
+</body>
+</html>
