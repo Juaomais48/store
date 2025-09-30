@@ -1,4 +1,4 @@
-function showProducts(category) {
+function showProductsC(category) {
 
     const header = document.querySelector('.page-header');
     if (header) {
