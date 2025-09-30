@@ -468,11 +468,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Calcular automaticamente ao pressionar Enter no campo de valor
-document.getElementById('valor').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        calcularJuros();
-    }
-});
+const valorInput = document.getElementById('valor');
+if (valorInput) {
+    valorInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            calcularJuros();
+        }
+    });
+}
 
 // Inicializar exemplos com R$ 100,00
 window.onload = function () {
