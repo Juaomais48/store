@@ -483,7 +483,66 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', function () {
     // Todas as categorias começam fechadas
     closeAllFeatureCategories();
+    
+    // Inicializar lazy loading
+    initLazyLoading();
 });
+
+function initLazyLoading() {
+    const imageObserverOptions = {
+        threshold: 0.1,
+        rootMargin: '50px 0px'
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                loadImage(img);
+                observer.unobserve(img);
+            }
+        });
+    }, imageObserverOptions);
+
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach(img => {
+        img.classList.add('lazy-load', 'loading');
+        imageObserver.observe(img);
+    });
+
+    const lazyBackgrounds = document.querySelectorAll('[data-bg]');
+    lazyBackgrounds.forEach(element => {
+        imageObserver.observe(element);
+    });
+}
+
+function loadImage(img) {
+    img.classList.add('loading');
+    
+    if (img.dataset.src) {
+        const tempImg = new Image();
+        tempImg.onload = function() {
+            img.src = img.dataset.src;
+            img.classList.remove('loading');
+            img.classList.add('loaded');
+            img.removeAttribute('data-src');
+        };
+        tempImg.onerror = function() {
+            img.classList.remove('loading');
+            img.classList.add('error');
+        };
+        tempImg.src = img.dataset.src;
+    } else if (img.dataset.bg) {
+        const tempImg = new Image();
+        tempImg.onload = function() {
+            img.style.backgroundImage = `url(${img.dataset.bg})`;
+            img.classList.remove('loading');
+            img.classList.add('loaded');
+            img.removeAttribute('data-bg');
+        };
+        tempImg.src = img.dataset.bg;
+    }
+}
 
 // Fechar a popup ao clicar fora dela
 document.getElementById('popupOverlay').addEventListener('click', function (event) {
