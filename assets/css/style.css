@@ -198,7 +198,7 @@ body {
 }
 
 .category-card.starrail {
-    background-image: url('https://upload-os-bbs.hoyolab.com/upload/2025/05/21/245802369/bb49598632f2c4b19dd0899106d6ae89_7567409126412328075.png?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_70');
+    background-image: url('https://upload-os-bbs.hoyolab.com/upload/2025/05/21/245802369/bb49598632f2c4b19dd0899106d6ae89_7567409126412328075.png?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cpng%2Fquality%2Cq_70');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -347,6 +347,31 @@ body {
     margin-right: 15px;
     object-fit: cover;
     border: 2px solid #4c1d95;
+}
+
+/* Lazy Loading Styles */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+.lazy-load.loading {
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.1) 25%, rgba(139, 92, 246, 0.2) 50%, rgba(139, 92, 246, 0.1) 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 .product-info {
