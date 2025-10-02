@@ -390,7 +390,7 @@ body {
 }
 
 .product:hover .product-tray {
-    max-height: 310px;
+    max-height: 410px;
     padding: 20px;
 }
 
