@@ -474,6 +474,178 @@ if (valorInput) {
     });
 }
 
+// Variável global para armazenar os produtos
+let productsData = {};
+
+// Carregar dados dos produtos
+async function loadProductsData() {
+    try {
+        const response = await fetch('/store/assets/data/products.json');
+        productsData = await response.json();
+        initializeProducts();
+    } catch (error) {
+        console.error('Erro ao carregar dados dos produtos:', error);
+    }
+}
+
+// Inicializar produtos na página
+function initializeProducts() {
+    // Inicializar produtos do Genshin Impact
+    initializeCategoryProducts('genshin', 'cristais', 'Cristais Gênesis');
+    initializeCategoryProducts('genshin', 'passes', 'Passes e Bençãos');
+    initializeCategoryProducts('genshin', 'hacks', 'Hacks e Bypass');
+    
+    // Inicializar produtos do Star Rail
+    initializeCategoryProducts('starrail', 'fragmentos', 'Fragmentos Oníricos');
+    initializeCategoryProducts('starrail', 'passes', 'Passes e Suprimentos');
+    initializeCategoryProducts('starrail', 'hacks', 'Hacks e Bypass');
+    
+    // Inicializar produtos do Wuthering Waves
+    initializeCategoryProducts('wuwa', 'lunites', 'Lunites');
+    initializeCategoryProducts('wuwa', 'passes', 'Passes e Assinaturas');
+    initializeCategoryProducts('wuwa', 'hacks', 'Hacks e Bypass');
+    
+    // Inicializar produtos do Zenless Zone Zero
+    initializeCategoryProducts('zzz', 'monocromos', 'Monocromos');
+    initializeCategoryProducts('zzz', 'passes', 'Passes e Assinaturas');
+    initializeCategoryProducts('zzz', 'hacks', 'Hacks e Bypass');
+}
+
+// Inicializar produtos de uma categoria específica
+function initializeCategoryProducts(game, category, title) {
+    const section = document.getElementById(game);
+    if (!section) return;
+    
+    const categoryData = productsData[game]?.[category];
+    if (!categoryData || categoryData.length === 0) {
+        // Se não houver produtos, mostrar "Em Breve"
+        const productList = section.querySelector(`.product-list h4:contains("${title}")`)?.closest('.product-list');
+        if (productList) {
+            productList.innerHTML = `<h4>${title}</h4><div class="product-none"><p>Em Breve.</p></div>`;
+        }
+        return;
+    }
+    
+    // Encontrar a lista de produtos correspondente
+    const productLists = section.querySelectorAll('.product-list');
+    let targetList = null;
+    
+    productLists.forEach(list => {
+        if (list.querySelector('h4')?.textContent === title) {
+            targetList = list;
+        }
+    });
+    
+    if (!targetList) return;
+    
+    // Limpar conteúdo existente (exceto o título)
+    const titleElement = targetList.querySelector('h4');
+    targetList.innerHTML = '';
+    targetList.appendChild(titleElement);
+    
+    // Adicionar produtos
+    categoryData.forEach(product => {
+        const productElement = createProductElement(product, game, category);
+        targetList.appendChild(productElement);
+    });
+}
+
+// Criar elemento de produto
+function createProductElement(product, game, category) {
+    const productDiv = document.createElement('div');
+    productDiv.className = `product ${product.hasTray ? 'has-tray' : ''}`;
+    
+    let productHTML = `
+        <div class="product-main">
+            ${product.hasTray ? '<div class="tray-indicator"></div>' : ''}
+            <img src="${product.image}" alt="${product.id}">
+            <div class="product-info">
+                <div class="product-name">${product.name}</div>
+                ${product.bonus ? `<div class="product-bonus">${product.bonus}</div>` : ''}
+                ${product.oldPrice ? `<div class="product-old-price">R$ ${product.oldPrice.toFixed(2)}</div>` : ''}
+                <div class="product-price">R$ ${product.price.toFixed(2)}</div>
+            </div>
+            <button class="buy-btn" onclick="openCheckout('${game}', '${category}', '${product.id}')">Comprar</button>
+        </div>
+    `;
+    
+    if (product.hasTray && product.durations) {
+        productHTML += `
+            <div class="product-tray">
+                <div class="tray-content">
+                    <div class="tray-title">${category === 'hacks' && product.durations.length === 1 ? 'Somente uma opção disponível:' : 'Escolha a duração do acesso:'}</div>
+                    <div class="duration-options">
+        `;
+        
+        product.durations.forEach(duration => {
+            productHTML += `
+                <div class="duration-option" onclick="selectDuration(this, '${game}', '${category}', '${product.id}', '${duration.text}')">
+                    <span class="duration-text">${duration.text}</span>
+                    ${duration.oldPrice ? `<span class="duration-old-price">R$ ${duration.oldPrice.toFixed(2)}</span>` : ''}
+                    <span class="duration-price">R$ ${duration.price > 0 ? duration.price.toFixed(2) : ''}</span>
+                </div>
+            `;
+        });
+        
+        productHTML += `
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    productDiv.innerHTML = productHTML;
+    return productDiv;
+}
+
+// Função para abrir checkout com dados do JSON
+function openCheckout(game, category, productId) {
+    const product = productsData[game]?.[category]?.find(p => p.id === productId);
+    if (!product) return;
+    
+    document.getElementById('checkoutImage').src = product.image;
+    document.getElementById('checkoutName').textContent = product.name;
+    
+    // Se não tem tray, usar preço base
+    if (!product.hasTray) {
+        document.getElementById('checkoutDuration').textContent = '';
+        document.getElementById('checkoutPrice').textContent = `R$ ${product.price.toFixed(2)}`;
+    } else {
+        // Se tem tray, usar primeira opção como padrão
+        const firstDuration = product.durations[0];
+        document.getElementById('checkoutDuration').textContent = firstDuration.text;
+        document.getElementById('checkoutPrice').textContent = `R$ ${firstDuration.price.toFixed(2)}`;
+    }
+    
+    document.getElementById('checkoutPopup').style.display = 'flex';
+}
+
+// Função para selecionar duração
+function selectDuration(element, game, category, productId, durationText) {
+    const product = productsData[game]?.[category]?.find(p => p.id === productId);
+    if (!product || !product.durations) return;
+    
+    const duration = product.durations.find(d => d.text === durationText);
+    if (!duration) return;
+    
+    // Atualizar UI para mostrar seleção
+    document.querySelectorAll('.duration-option').forEach(opt => {
+        opt.classList.remove('selected');
+    });
+    element.classList.add('selected');
+    
+    // Atualizar preço principal se estiver no checkout
+    if (document.getElementById('checkoutPopup').style.display === 'flex') {
+        document.getElementById('checkoutDuration').textContent = durationText;
+        document.getElementById('checkoutPrice').textContent = `R$ ${duration.price.toFixed(2)}`;
+    }
+}
+
+// Carregar dados quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    loadProductsData();
+});
+
 // Inicializar exemplos com R$ 100,00
 window.onload = function () {
     atualizarExemplos(100);

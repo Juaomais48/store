@@ -1,0 +1,335 @@
+{
+  "genshin": {
+    "cristais": [
+      {
+        "id": "60cristais",
+        "name": "60 Cristais",
+        "image": "https://i.ibb.co/q6p2jzH/60cristais.png",
+        "bonus": "+ 60 na Primeira Recarga",
+        "oldPrice": 4.90,
+        "price": 4.30
+      },
+      {
+        "id": "300cristais",
+        "name": "300 Cristais",
+        "image": "https://i.ibb.co/q3X493sS/300cristais.png",
+        "bonus": "+ 300 na Primeira Recarga",
+        "oldPrice": 25.90,
+        "price": 20.90
+      },
+      {
+        "id": "980cristais",
+        "name": "980 Cristais",
+        "image": "https://i.ibb.co/NzYtkRg/980cristais.png",
+        "bonus": "+ 980 na Primeira Recarga",
+        "oldPrice": 76.90,
+        "price": 61.90
+      },
+      {
+        "id": "1980cristais",
+        "name": "1.980 Cristais",
+        "image": "https://i.ibb.co/hJfmRw1Q/1980cristais.png",
+        "bonus": "+ 1.980 na Primeira Recarga",
+        "oldPrice": 154.90,
+        "price": 124.90
+      },
+      {
+        "id": "3280cristais",
+        "name": "3.280 Cristais",
+        "image": "https://i.ibb.co/XZcfWgGz/3280cristais.png",
+        "bonus": "+ 3.280 na Primeira Recarga",
+        "oldPrice": 254.90,
+        "price": 200.90
+      },
+      {
+        "id": "6480cristais",
+        "name": "6.480 Cristais",
+        "image": "https://i.ibb.co/GQ0zQhq3/6480cristais.png",
+        "bonus": "+ 6.480 na Primeira Recarga",
+        "oldPrice": 499.90,
+        "price": 400.90
+      },
+      {
+        "id": "15680cristais",
+        "name": "15.680 Cristais",
+        "image": "https://i.ibb.co/HpBdsWn9/money.gif",
+        "bonus": "+ 15.680 na Primeira Recarga",
+        "oldPrice": 1017.40,
+        "price": 800.90
+      }
+    ],
+    "passes": [
+      {
+        "id": "bencao",
+        "name": "Benção da Lua Nova",
+        "image": "https://i.ibb.co/gLGqYbv9/bencao.png",
+        "oldPrice": 25.90,
+        "price": 20.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "30 dias", "oldPrice": 25.90, "price": 20.90},
+          {"text": "60 dias", "oldPrice": 51.80, "price": 43.90},
+          {"text": "90 dias", "oldPrice": 77.70, "price": 64.90},
+          {"text": "120 dias", "oldPrice": 103.60, "price": 86.90},
+          {"text": "150 dias", "oldPrice": 129.50, "price": 105.90},
+          {"text": "180 dias", "oldPrice": 155.40, "price": 123.90}
+        ]
+      },
+      {
+        "id": "hino",
+        "name": "Hino Gnóstico",
+        "image": "https://i.ibb.co/4nkc4ZV3/hino2.png",
+        "oldPrice": 49.90,
+        "price": 42.90,
+        "hasTray": false
+      },
+      {
+        "id": "coro",
+        "name": "Coro Gnóstico",
+        "image": "https://i.ibb.co/XZs7mJSK/coro1.png",
+        "oldPrice": 99.90,
+        "price": 81.90,
+        "hasTray": false
+      },
+      {
+        "id": "coroup",
+        "name": "UP de Hino para Coro",
+        "image": "https://i.ibb.co/kVk0Jwq4/coroUP.png",
+        "oldPrice": 49.90,
+        "price": 42.90,
+        "hasTray": false
+      }
+    ],
+    "hacks": [
+      {
+        "id": "shika",
+        "name": "Menu Shika",
+        "image": "https://i.ibb.co/xSqN3FFW/shika.gif",
+        "price": 30.00,
+        "hasTray": true,
+        "durations": [
+          {"text": "Shika Beta - Vitalício", "price": 30.00},
+          {"text": "Shika Alpha - Vitalício", "price": 350.00}
+        ]
+      },
+      {
+        "id": "unicore",
+        "name": "Menu UniCore",
+        "image": "https://i.ibb.co/4wjFF2By/uni.png",
+        "price": 16.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "2 dias", "price": 16.90},
+          {"text": "7 dias", "price": 38.90},
+          {"text": "30 dias", "price": 79.90}
+        ]
+      },
+      {
+        "id": "slash",
+        "name": "Slash Bypass",
+        "image": "https://i.ibb.co/4ZdYnFPh/slash.png",
+        "price": 21.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 21.90},
+          {"text": "7 dias", "price": 32.90},
+          {"text": "30 dias", "price": 53.90}
+        ]
+      }
+    ]
+  },
+  "starrail": {
+    "fragmentos": [
+      {
+        "id": "60fragmentos",
+        "name": "60 Fragmentos",
+        "image": "https://i.ibb.co/GfwF3ndR/60fragmentos.png",
+        "bonus": "+ 60 na Primeira Recarga",
+        "oldPrice": 4.90,
+        "price": 4.60
+      },
+      {
+        "id": "300fragmentos",
+        "name": "300 Fragmentos",
+        "image": "https://i.ibb.co/b5t6pYNc/300fragmentos.png",
+        "bonus": "+ 300 na Primeira Recarga",
+        "oldPrice": 24.90,
+        "price": 22.90
+      },
+      {
+        "id": "980fragmentos",
+        "name": "980 Fragmentos",
+        "image": "https://i.ibb.co/99tWf0Tt/980fragmentos.png",
+        "bonus": "+ 980 na Primeira Recarga",
+        "oldPrice": 79.90,
+        "price": 66.90
+      },
+      {
+        "id": "1980fragmentos",
+        "name": "1.980 Fragmentos",
+        "image": "https://i.ibb.co/mrggYypC/1980gragmentos.png",
+        "bonus": "+ 1.980 na Primeira Recarga",
+        "oldPrice": 149.90,
+        "price": 136.90
+      },
+      {
+        "id": "3280fragmentos",
+        "name": "3.280 Fragmentos",
+        "image": "https://i.ibb.co/0725dVy/3280fragmentos.png",
+        "bonus": "+ 3.280 na Primeira Recarga",
+        "oldPrice": 249.90,
+        "price": 226.90
+      },
+      {
+        "id": "6480fragmentos",
+        "name": "6.480 Fragmentos",
+        "image": "https://i.ibb.co/2YcRJDX6/6480fragmentos.png",
+        "bonus": "+ 6.480 na Primeira Recarga",
+        "oldPrice": 499.90,
+        "price": 456.90
+      },
+      {
+        "id": "15680fragmentos",
+        "name": "15.680 Fragmentos",
+        "image": "https://i.ibb.co/M5sVTJyN/aventurine.gif",
+        "bonus": "+ 15.680 na Primeira Recarga",
+        "oldPrice": 1009.40,
+        "price": 880.90
+      }
+    ],
+    "passes": [
+      {
+        "id": "suprimento",
+        "name": "Suprimento do Expresso",
+        "image": "https://i.ibb.co/XkWBJKWH/suprimento.png",
+        "oldPrice": 24.90,
+        "price": 22.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "30 dias", "oldPrice": 24.90, "price": 22.90},
+          {"text": "60 dias", "oldPrice": 49.80, "price": 45.90},
+          {"text": "90 dias", "oldPrice": 74.70, "price": 68.90},
+          {"text": "120 dias", "oldPrice": 99.60, "price": 88.90},
+          {"text": "150 dias", "oldPrice": 124.50, "price": 110.90},
+          {"text": "180 dias", "oldPrice": 149.40, "price": 136.90}
+        ]
+      }
+    ],
+    "hacks": [
+      {
+        "id": "unistar",
+        "name": "Menu UniStar",
+        "image": "https://i.ibb.co/4wjFF2By/uni.png",
+        "price": 11.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "2 dias", "price": 11.90},
+          {"text": "7 dias", "price": 27.90},
+          {"text": "30 dias", "price": 55.90}
+        ]
+      },
+      {
+        "id": "mintysr",
+        "name": "Menu Minty SR",
+        "image": "assets/images/webp/minty.webp",
+        "price": 5.00,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 5.00},
+          {"text": "7 dias", "price": 10.90},
+          {"text": "14 dias", "price": 0},
+          {"text": "30 dias", "price": 0},
+          {"text": "90 dias", "price": 0},
+          {"text": "1 ano", "price": 0},
+          {"text": "Acesso Vitalício", "price": 0}
+        ]
+      }
+    ]
+  },
+  "wuwa": {
+    "lunites": [],
+    "passes": [],
+    "hacks": [
+      {
+        "id": "uniwaves",
+        "name": "Menu UniWaves",
+        "image": "https://i.ibb.co/4wjFF2By/uni.png",
+        "price": 16.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "2 dias", "price": 16.90},
+          {"text": "7 dias", "price": 38.90},
+          {"text": "30 dias", "price": 79.90}
+        ]
+      },
+      {
+        "id": "kittenwaves",
+        "name": "Menu KittenWaves",
+        "image": "https://i.ibb.co/VcHz3kxF/kitten.gif",
+        "price": 139.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "KittenWaves - Vitalício", "price": 139.90}
+        ]
+      },
+      {
+        "id": "slashwuwa",
+        "name": "Slash Bypass",
+        "image": "https://i.ibb.co/4ZdYnFPh/slash.png",
+        "price": 21.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 21.90},
+          {"text": "7 dias", "price": 32.90},
+          {"text": "30 dias", "price": 53.90}
+        ]
+      }
+    ]
+  },
+  "zzz": {
+    "monocromos": [],
+    "passes": [],
+    "hacks": [
+      {
+        "id": "unizone",
+        "name": "Menu UniZone",
+        "image": "https://i.ibb.co/4wjFF2By/uni.png",
+        "price": 16.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "2 dias", "price": 16.90},
+          {"text": "7 dias", "price": 38.90},
+          {"text": "30 dias", "price": 79.90}
+        ]
+      },
+      {
+        "id": "mintyzzz",
+        "name": "Menu Minty ZZZ",
+        "image": "assets/images/webp/minty.webp",
+        "price": 5.00,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 5.00},
+          {"text": "7 dias", "price": 10.90},
+          {"text": "14 dias", "price": 0},
+          {"text": "30 dias", "price": 0},
+          {"text": "90 dias", "price": 0},
+          {"text": "1 ano", "price": 0},
+          {"text": "Acesso Vitalício", "price": 0}
+        ]
+      },
+      {
+        "id": "slashzzz",
+        "name": "Slash Bypass",
+        "image": "https://i.ibb.co/4ZdYnFPh/slash.png",
+        "price": 21.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 21.90},
+          {"text": "7 dias", "price": 32.90},
+          {"text": "30 dias", "price": 53.90}
+        ]
+      }
+    ]
+  }
+}
