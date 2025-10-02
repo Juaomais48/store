@@ -1,9 +1,4 @@
 function showProductsC(category) {
-
-    const header = document.querySelector('.page-header');
-    if (header) {
-        header.remove();
-    }
     document.querySelectorAll('.category-card').forEach(card => {
         card.classList.remove('active');
     });
@@ -15,6 +10,7 @@ function showProductsC(category) {
     event.target.closest('.category-card').classList.add('active');
 
     document.getElementById(category).classList.add('active');
+    smoothScrollToTargetHome();
 }
 
 function openPopup() {
@@ -90,10 +86,6 @@ function showCheat(cheatId) {
 
 // Função para mostrar cheat direto (para categorias sem subcategorias como Slash)
 function showCheatDirect(cheatId) {
-    const header = document.querySelector('.page-header');
-    if (header) {
-        header.remove();
-    }
     // Remove active de todos os botões principais
     document.querySelectorAll('.cheat-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -172,6 +164,18 @@ function closeAllFeatureCategories() {
     document.querySelectorAll('.feature-category').forEach(category => {
         category.classList.remove('active');
     });
+}
+
+function smoothScrollToTargetHome() {
+    setTimeout(() => {
+        const target = document.getElementById('home-target');
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }, 100); // 300ms de delay
 }
 
 function smoothScrollToTarget() {

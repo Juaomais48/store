@@ -13,6 +13,8 @@ body {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d1b69 50%, #1a1a1a 100%);
     color: white;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-header {
@@ -531,14 +533,7 @@ body {
     background: rgba(0, 0, 0, 0.8);
     border-top: 2px solid #8b5cf6;
     padding: 20px 0;
-}
-
-.footer-margin160 {
-    margin-top: 160px;
-}
-
-.footer-margin300 {
-    margin-top: 300px;
+    margin-top: auto
 }
 
 .footer-content {
