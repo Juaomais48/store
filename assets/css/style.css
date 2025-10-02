@@ -36,7 +36,7 @@ body {
     align-items: center;
 }
 
-.header {
+.page-header {
     text-align: center;
     margin-bottom: 60px;
     padding: 40px 20px;
@@ -45,10 +45,11 @@ body {
     backdrop-filter: blur(10px);
     border-top: 2px solid rgba(152, 74, 255, 0.651);
     box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.2);
+    min-width: 1200px;
 }
 
-.header h1 {
-    font-size: 3rem;
+.page-header h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
     background: linear-gradient(45deg, #a78bfa, #c084fc, #b794f6, #ddd6fe, #a78bfa, #c084fc);
     background-size: 300% 100%;
@@ -56,18 +57,6 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: flowingGradient 3s ease-in-out infinite;
-    text-shadow:
-        0 0 10px rgba(167, 139, 250, 0.5),
-        0 0 20px rgba(192, 132, 252, 0.3),
-        0 0 30px rgba(183, 148, 246, 0.2);
-}
-
-.header p {
-    font-size: 1.2rem;
-    color: #e5e7eb;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
 }
 
 .logo {
@@ -142,28 +131,6 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 40px;
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: 60px;
-    padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border-top: 2px solid rgba(152, 74, 255, 0.651);
-    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.2);
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    background: linear-gradient(45deg, #a78bfa, #c084fc, #b794f6, #ddd6fe, #a78bfa, #c084fc);
-    background-size: 300% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: flowingGradient 3s ease-in-out infinite;
 }
 
 .categories {
