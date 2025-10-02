@@ -22,10 +22,6 @@ function closePopup() {
 }
 
 function showSubcategories(type) {
-    const header = document.querySelector('.page-header');
-    if (header) {
-        header.remove();
-    }
     // Remove active de todos os botões principais
     document.querySelectorAll('.cheat-btn').forEach(btn => {
         btn.classList.remove('active');
