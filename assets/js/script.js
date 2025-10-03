@@ -481,7 +481,7 @@ if (valorInput) {
 // Carregar dados dos produtos
 async function loadProductsData() {
     try {
-        const response = await fetch('assets/data/products.json');
+        const response = await fetch('/store/assets/data/products.json');
         productsData = await response.json();
         initializeProducts();
     } catch (error) {
