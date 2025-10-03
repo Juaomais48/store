@@ -1,3 +1,7 @@
+// Variáveis globais
+let productsData = {};
+let currentCheckoutData = null;
+
 function showProductsC(category) {
     document.querySelectorAll('.category-card').forEach(card => {
         card.classList.remove('active');
@@ -474,13 +478,10 @@ if (valorInput) {
     });
 }
 
-// Variável global para armazenar os produtos
-let productsData = {};
-
 // Carregar dados dos produtos
 async function loadProductsData() {
     try {
-        const response = await fetch('/store/assets/data/products.json');
+        const response = await fetch('assets/data/products.json');
         productsData = await response.json();
         initializeProducts();
     } catch (error) {
@@ -501,14 +502,47 @@ function initializeProducts() {
     initializeCategoryProducts('starrail', 'hacks', 'Hacks e Bypass');
     
     // Inicializar produtos do Wuthering Waves
-    initializeCategoryProducts('wuwa', 'lunites', 'Lunites');
-    initializeCategoryProducts('wuwa', 'passes', 'Passes e Assinaturas');
     initializeCategoryProducts('wuwa', 'hacks', 'Hacks e Bypass');
     
     // Inicializar produtos do Zenless Zone Zero
-    initializeCategoryProducts('zzz', 'monocromos', 'Monocromos');
-    initializeCategoryProducts('zzz', 'passes', 'Passes e Assinaturas');
     initializeCategoryProducts('zzz', 'hacks', 'Hacks e Bypass');
+    
+    // Manter conteúdo original para categorias vazias
+    preserveEmptyCategories();
+}
+
+// Manter o conteúdo original para categorias sem dados no JSON
+function preserveEmptyCategories() {
+    // Para Wuwa - Lunites e Passes
+    const wuwaLunites = document.querySelector('#wuwa .product-list h4:contains("Lunites")')?.closest('.product-list');
+    const wuwaPasses = document.querySelector('#wuwa .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
+    
+    // Para ZZZ - Monocromos e Passes
+    const zzzMonocromos = document.querySelector('#zzz .product-list h4:contains("Monocromos")')?.closest('.product-list');
+    const zzzPasses = document.querySelector('#zzz .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
+    
+    // Verificar se essas categorias têm dados no JSON
+    const wuwaHasLunites = productsData.wuwa?.lunites?.length > 0;
+    const wuwaHasPasses = productsData.wuwa?.passes?.length > 0;
+    const zzzHasMonocromos = productsData.zzz?.monocromos?.length > 0;
+    const zzzHasPasses = productsData.zzz?.passes?.length > 0;
+    
+    // Restaurar conteúdo original se não houver dados no JSON
+    if (wuwaLunites && !wuwaHasLunites) {
+        wuwaLunites.innerHTML = '<h4>Lunites</h4><div class="product-none"><p>Em Breve.</p></div>';
+    }
+    
+    if (wuwaPasses && !wuwaHasPasses) {
+        wuwaPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
+    }
+    
+    if (zzzMonocromos && !zzzHasMonocromos) {
+        zzzMonocromos.innerHTML = '<h4>Monocromos</h4><div class="product-none"><p>Em Breve.</p></div>';
+    }
+    
+    if (zzzPasses && !zzzHasPasses) {
+        zzzPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
+    }
 }
 
 // Inicializar produtos de uma categoria específica
@@ -517,12 +551,9 @@ function initializeCategoryProducts(game, category, title) {
     if (!section) return;
     
     const categoryData = productsData[game]?.[category];
+    
+    // Se não houver dados no JSON, manter o conteúdo original (não fazer nada)
     if (!categoryData || categoryData.length === 0) {
-        // Se não houver produtos, mostrar "Em Breve"
-        const productList = section.querySelector(`.product-list h4:contains("${title}")`)?.closest('.product-list');
-        if (productList) {
-            productList.innerHTML = `<h4>${title}</h4><div class="product-none"><p>Em Breve.</p></div>`;
-        }
         return;
     }
     
@@ -578,11 +609,12 @@ function createProductElement(product, game, category) {
         `;
         
         product.durations.forEach(duration => {
+            const durationPrice = duration.price > 0 ? `R$ ${duration.price.toFixed(2)}` : '';
             productHTML += `
-                <div class="duration-option" onclick="selectDuration(this, '${game}', '${category}', '${product.id}', '${duration.text}')">
+                <div class="duration-option" onclick="openCheckoutWithDuration('${game}', '${category}', '${product.id}', '${duration.text}', ${duration.price}, ${duration.oldPrice || 'null'})">
                     <span class="duration-text">${duration.text}</span>
                     ${duration.oldPrice ? `<span class="duration-old-price">R$ ${duration.oldPrice.toFixed(2)}</span>` : ''}
-                    <span class="duration-price">R$ ${duration.price > 0 ? duration.price.toFixed(2) : ''}</span>
+                    <span class="duration-price">${durationPrice}</span>
                 </div>
             `;
         });
@@ -610,14 +642,60 @@ function openCheckout(game, category, productId) {
     if (!product.hasTray) {
         document.getElementById('checkoutDuration').textContent = '';
         document.getElementById('checkoutPrice').textContent = `R$ ${product.price.toFixed(2)}`;
+        
+        // Armazenar dados da compra
+        currentCheckoutData = {
+            game: game,
+            category: category,
+            productId: productId,
+            productName: product.name,
+            duration: '',
+            price: product.price,
+            image: product.image
+        };
     } else {
         // Se tem tray, usar primeira opção como padrão
         const firstDuration = product.durations[0];
         document.getElementById('checkoutDuration').textContent = firstDuration.text;
         document.getElementById('checkoutPrice').textContent = `R$ ${firstDuration.price.toFixed(2)}`;
+        
+        // Armazenar dados da compra
+        currentCheckoutData = {
+            game: game,
+            category: category,
+            productId: productId,
+            productName: product.name,
+            duration: firstDuration.text,
+            price: firstDuration.price,
+            image: product.image
+        };
     }
     
     document.getElementById('checkoutPopup').style.display = 'flex';
+}
+
+// Função para abrir checkout com duração específica
+function openCheckoutWithDuration(game, category, productId, durationText, durationPrice, durationOldPrice) {
+    const product = productsData[game]?.[category]?.find(p => p.id === productId);
+    if (!product) return;
+    
+    document.getElementById('checkoutImage').src = product.image;
+    document.getElementById('checkoutName').textContent = product.name;
+    document.getElementById('checkoutDuration').textContent = durationText;
+    document.getElementById('checkoutPrice').textContent = `R$ ${durationPrice.toFixed(2)}`;
+    
+    document.getElementById('checkoutPopup').style.display = 'flex';
+    
+    // Armazenar os dados da compra para uso posterior
+    currentCheckoutData = {
+        game: game,
+        category: category,
+        productId: productId,
+        productName: product.name,
+        duration: durationText,
+        price: durationPrice,
+        image: product.image
+    };
 }
 
 // Função para selecionar duração
