@@ -287,8 +287,82 @@
     ]
   },
   "zzz": {
-    "monocromos": [],
-    "passes": [],
+    "monocromos": [
+      {
+        "id": "60monocromos",
+        "name": "60 monocromos",
+        "image": "https://i.ibb.co/GfwF3ndR/60fragmentos.png",
+        "bonus": "+ 60 na Primeira Recarga",
+        "oldPrice": 4.90,
+        "price": 4.60
+      },
+      {
+        "id": "300monocromos",
+        "name": "300 monocromos",
+        "image": "https://i.ibb.co/b5t6pYNc/300fragmentos.png",
+        "bonus": "+ 300 na Primeira Recarga",
+        "oldPrice": 24.90,
+        "price": 22.90
+      },
+      {
+        "id": "980monocromos",
+        "name": "980 monocromos",
+        "image": "https://i.ibb.co/99tWf0Tt/980fragmentos.png",
+        "bonus": "+ 980 na Primeira Recarga",
+        "oldPrice": 79.90,
+        "price": 66.90
+      },
+      {
+        "id": "1980monocromos",
+        "name": "1.980 monocromos",
+        "image": "https://i.ibb.co/mrggYypC/1980gragmentos.png",
+        "bonus": "+ 1.980 na Primeira Recarga",
+        "oldPrice": 149.90,
+        "price": 136.90
+      },
+      {
+        "id": "3280monocromos",
+        "name": "3.280 monocromos",
+        "image": "https://i.ibb.co/0725dVy/3280fragmentos.png",
+        "bonus": "+ 3.280 na Primeira Recarga",
+        "oldPrice": 249.90,
+        "price": 226.90
+      },
+      {
+        "id": "6480monocromos",
+        "name": "6.480 monocromos",
+        "image": "https://i.ibb.co/2YcRJDX6/6480fragmentos.png",
+        "bonus": "+ 6.480 na Primeira Recarga",
+        "oldPrice": 499.90,
+        "price": 456.90
+      },
+      {
+        "id": "15680monocromos",
+        "name": "15.680 monocromos",
+        "image": "https://i.ibb.co/M5sVTJyN/aventurine.gif",
+        "bonus": "+ 15.680 na Primeira Recarga",
+        "oldPrice": 1009.40,
+        "price": 880.90
+      }
+    ],
+    "passes": [
+      {
+        "id": "interlaco",
+        "name": "Assinatura da Interlaço",
+        "image": "https://i.ibb.co/XkWBJKWH/suprimento.png",
+        "oldPrice": 24.90,
+        "price": 22.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "30 dias", "oldPrice": 24.90, "price": 22.90},
+          {"text": "60 dias", "oldPrice": 49.80, "price": 45.90},
+          {"text": "90 dias", "oldPrice": 74.70, "price": 68.90},
+          {"text": "120 dias", "oldPrice": 99.60, "price": 88.90},
+          {"text": "150 dias", "oldPrice": 124.50, "price": 110.90},
+          {"text": "180 dias", "oldPrice": 149.40, "price": 136.90}
+        ]
+      }
+    ],
     "hacks": [
       {
         "id": "unizone",

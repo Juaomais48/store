@@ -505,6 +505,8 @@ function initializeProducts() {
     initializeCategoryProducts('wuwa', 'hacks', 'Hacks e Bypass');
     
     // Inicializar produtos do Zenless Zone Zero
+    initializeCategoryProducts('zzz', 'monocromos', 'Monocromos');
+    initializeCategoryProducts('zzz', 'passes', 'Passes e Assinaturas');
     initializeCategoryProducts('zzz', 'hacks', 'Hacks e Bypass');
     
     // Manter conteúdo original para categorias vazias
@@ -517,16 +519,10 @@ function preserveEmptyCategories() {
     const wuwaLunites = document.querySelector('#wuwa .product-list h4:contains("Lunites")')?.closest('.product-list');
     const wuwaPasses = document.querySelector('#wuwa .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
     
-    // Para ZZZ - Monocromos e Passes
-    const zzzMonocromos = document.querySelector('#zzz .product-list h4:contains("Monocromos")')?.closest('.product-list');
-    const zzzPasses = document.querySelector('#zzz .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
-    
     // Verificar se essas categorias têm dados no JSON
     const wuwaHasLunites = productsData.wuwa?.lunites?.length > 0;
     const wuwaHasPasses = productsData.wuwa?.passes?.length > 0;
-    const zzzHasMonocromos = productsData.zzz?.monocromos?.length > 0;
-    const zzzHasPasses = productsData.zzz?.passes?.length > 0;
-    
+
     // Restaurar conteúdo original se não houver dados no JSON
     if (wuwaLunites && !wuwaHasLunites) {
         wuwaLunites.innerHTML = '<h4>Lunites</h4><div class="product-none"><p>Em Breve.</p></div>';
@@ -534,14 +530,6 @@ function preserveEmptyCategories() {
     
     if (wuwaPasses && !wuwaHasPasses) {
         wuwaPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
-    }
-    
-    if (zzzMonocromos && !zzzHasMonocromos) {
-        zzzMonocromos.innerHTML = '<h4>Monocromos</h4><div class="product-none"><p>Em Breve.</p></div>';
-    }
-    
-    if (zzzPasses && !zzzHasPasses) {
-        zzzPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
     }
 }
 
