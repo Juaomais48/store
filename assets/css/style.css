@@ -1921,6 +1921,10 @@ body {
     .checkout-price {
         font-size: 20px;
     }
+
+    .copyright {
+    font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
