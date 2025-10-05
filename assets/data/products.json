@@ -290,8 +290,8 @@
     "monocromos": [
       {
         "id": "60monocromos",
-        "name": "60 monocromos",
-        "image": "https://i.ibb.co/GfwF3ndR/60fragmentos.png",
+        "name": "60 Monocromos",
+        "image": "/store/assets/images/png/60monocromos.png",
         "bonus": "+ 60 na Primeira Recarga",
         "oldPrice": 4.90,
         "price": 4.60
@@ -299,47 +299,47 @@
       {
         "id": "300monocromos",
         "name": "300 monocromos",
-        "image": "https://i.ibb.co/b5t6pYNc/300fragmentos.png",
+        "image": "",
         "bonus": "+ 300 na Primeira Recarga",
         "oldPrice": 24.90,
         "price": 22.90
       },
       {
         "id": "980monocromos",
-        "name": "980 monocromos",
-        "image": "https://i.ibb.co/99tWf0Tt/980fragmentos.png",
+        "name": "980 Monocromos",
+        "image": "",
         "bonus": "+ 980 na Primeira Recarga",
         "oldPrice": 79.90,
         "price": 66.90
       },
       {
         "id": "1980monocromos",
-        "name": "1.980 monocromos",
-        "image": "https://i.ibb.co/mrggYypC/1980gragmentos.png",
+        "name": "1.980 Monocromos",
+        "image": "",
         "bonus": "+ 1.980 na Primeira Recarga",
         "oldPrice": 149.90,
         "price": 136.90
       },
       {
         "id": "3280monocromos",
-        "name": "3.280 monocromos",
-        "image": "https://i.ibb.co/0725dVy/3280fragmentos.png",
+        "name": "3.280 Monocromos",
+        "image": "",
         "bonus": "+ 3.280 na Primeira Recarga",
         "oldPrice": 249.90,
         "price": 226.90
       },
       {
         "id": "6480monocromos",
-        "name": "6.480 monocromos",
-        "image": "https://i.ibb.co/2YcRJDX6/6480fragmentos.png",
+        "name": "6.480 Monocromos",
+        "image": "",
         "bonus": "+ 6.480 na Primeira Recarga",
         "oldPrice": 499.90,
         "price": 456.90
       },
       {
         "id": "15680monocromos",
-        "name": "15.680 monocromos",
-        "image": "https://i.ibb.co/M5sVTJyN/aventurine.gif",
+        "name": "15.680 Monocromos",
+        "image": "",
         "bonus": "+ 15.680 na Primeira Recarga",
         "oldPrice": 1009.40,
         "price": 880.90
@@ -349,7 +349,7 @@
       {
         "id": "interlaco",
         "name": "Assinatura da Interlaço",
-        "image": "https://i.ibb.co/XkWBJKWH/suprimento.png",
+        "image": "",
         "oldPrice": 24.90,
         "price": 22.90,
         "hasTray": true,
