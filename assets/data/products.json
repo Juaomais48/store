@@ -265,7 +265,7 @@
       {
         "id": "kittenwaves",
         "name": "Menu KittenWaves",
-        "image": "/store/assets/images/png/kitten.gif",
+        "image": "/store/assets/images/gif/kitten.gif",
         "price": 139.90,
         "hasTray": true,
         "durations": [
