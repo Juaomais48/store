@@ -4,7 +4,7 @@
       {
         "id": "60cristais",
         "name": "60 Cristais",
-        "image": "https://i.ibb.co/q6p2jzH/60cristais.png",
+        "image": "/store/assets/images/png/60cristais.png",
         "bonus": "+ 60 na Primeira Recarga",
         "oldPrice": 4.90,
         "price": 4.30
@@ -12,7 +12,7 @@
       {
         "id": "300cristais",
         "name": "300 Cristais",
-        "image": "https://i.ibb.co/q3X493sS/300cristais.png",
+        "image": "/store/assets/images/png/300cristais.png",
         "bonus": "+ 300 na Primeira Recarga",
         "oldPrice": 25.90,
         "price": 20.90
@@ -20,7 +20,7 @@
       {
         "id": "980cristais",
         "name": "980 Cristais",
-        "image": "https://i.ibb.co/NzYtkRg/980cristais.png",
+        "image": "/store/assets/images/png/980cristais.png",
         "bonus": "+ 980 na Primeira Recarga",
         "oldPrice": 76.90,
         "price": 61.90
@@ -28,7 +28,7 @@
       {
         "id": "1980cristais",
         "name": "1.980 Cristais",
-        "image": "https://i.ibb.co/hJfmRw1Q/1980cristais.png",
+        "image": "/store/assets/images/png/1980cristais.png",
         "bonus": "+ 1.980 na Primeira Recarga",
         "oldPrice": 154.90,
         "price": 124.90
@@ -36,7 +36,7 @@
       {
         "id": "3280cristais",
         "name": "3.280 Cristais",
-        "image": "https://i.ibb.co/XZcfWgGz/3280cristais.png",
+        "image": "/store/assets/images/png/3280cristais.png",
         "bonus": "+ 3.280 na Primeira Recarga",
         "oldPrice": 254.90,
         "price": 200.90
@@ -44,7 +44,7 @@
       {
         "id": "6480cristais",
         "name": "6.480 Cristais",
-        "image": "https://i.ibb.co/GQ0zQhq3/6480cristais.png",
+        "image": "/store/assets/images/png/6480cristais.png",
         "bonus": "+ 6.480 na Primeira Recarga",
         "oldPrice": 499.90,
         "price": 400.90
@@ -52,7 +52,7 @@
       {
         "id": "15680cristais",
         "name": "15.680 Cristais",
-        "image": "https://i.ibb.co/HpBdsWn9/money.gif",
+        "image": "/store/assets/images/gif/money.gif",
         "bonus": "+ 15.680 na Primeira Recarga",
         "oldPrice": 1017.40,
         "price": 800.90
@@ -62,7 +62,7 @@
       {
         "id": "bencao",
         "name": "Benção da Lua Nova",
-        "image": "https://i.ibb.co/gLGqYbv9/bencao.png",
+        "image": "/store/assets/images/png/bencao.png",
         "oldPrice": 25.90,
         "price": 20.90,
         "hasTray": true,
@@ -78,7 +78,7 @@
       {
         "id": "hino",
         "name": "Hino Gnóstico",
-        "image": "https://i.ibb.co/4nkc4ZV3/hino2.png",
+        "image": "/store/assets/images/png/hino2.png",
         "oldPrice": 49.90,
         "price": 42.90,
         "hasTray": false
@@ -86,7 +86,7 @@
       {
         "id": "coro",
         "name": "Coro Gnóstico",
-        "image": "https://i.ibb.co/XZs7mJSK/coro1.png",
+        "image": "/store/assets/images/png/coro1.png",
         "oldPrice": 99.90,
         "price": 81.90,
         "hasTray": false
@@ -94,7 +94,7 @@
       {
         "id": "coroup",
         "name": "UP de Hino para Coro",
-        "image": "https://i.ibb.co/kVk0Jwq4/coroUP.png",
+        "image": "/store/assets/images/png/coroUP.png",
         "oldPrice": 49.90,
         "price": 42.90,
         "hasTray": false
@@ -104,7 +104,7 @@
       {
         "id": "shika",
         "name": "Menu Shika",
-        "image": "https://i.ibb.co/xSqN3FFW/shika.gif",
+        "image": "/store/assets/images/gif/shika.gif",
         "price": 30.00,
         "hasTray": true,
         "durations": [
@@ -115,7 +115,7 @@
       {
         "id": "unicore",
         "name": "Menu UniCore",
-        "image": "https://i.ibb.co/4wjFF2By/uni.png",
+        "image": "/store/assets/images/png/uni.png",
         "price": 16.90,
         "hasTray": true,
         "durations": [
@@ -127,7 +127,7 @@
       {
         "id": "slash",
         "name": "Slash Bypass",
-        "image": "https://i.ibb.co/4ZdYnFPh/slash.png",
+        "image": "/store/assets/images/png/slash.png",
         "price": 21.90,
         "hasTray": true,
         "durations": [
@@ -143,7 +143,7 @@
       {
         "id": "60fragmentos",
         "name": "60 Fragmentos",
-        "image": "https://i.ibb.co/GfwF3ndR/60fragmentos.png",
+        "image": "/store/assets/images/png/60fragmentos.png",
         "bonus": "+ 60 na Primeira Recarga",
         "oldPrice": 4.90,
         "price": 4.60
@@ -151,7 +151,7 @@
       {
         "id": "300fragmentos",
         "name": "300 Fragmentos",
-        "image": "https://i.ibb.co/b5t6pYNc/300fragmentos.png",
+        "image": "/store/assets/images/png/300fragmentos.png",
         "bonus": "+ 300 na Primeira Recarga",
         "oldPrice": 24.90,
         "price": 22.90
@@ -159,7 +159,7 @@
       {
         "id": "980fragmentos",
         "name": "980 Fragmentos",
-        "image": "https://i.ibb.co/99tWf0Tt/980fragmentos.png",
+        "image": "/store/assets/images/png/980fragmentos.png",
         "bonus": "+ 980 na Primeira Recarga",
         "oldPrice": 79.90,
         "price": 66.90
@@ -167,7 +167,7 @@
       {
         "id": "1980fragmentos",
         "name": "1.980 Fragmentos",
-        "image": "https://i.ibb.co/mrggYypC/1980gragmentos.png",
+        "image": "/store/assets/images/png/1980gragmentos.png",
         "bonus": "+ 1.980 na Primeira Recarga",
         "oldPrice": 149.90,
         "price": 136.90
@@ -175,7 +175,7 @@
       {
         "id": "3280fragmentos",
         "name": "3.280 Fragmentos",
-        "image": "https://i.ibb.co/0725dVy/3280fragmentos.png",
+        "image": "/store/assets/images/png/3280fragmentos.png",
         "bonus": "+ 3.280 na Primeira Recarga",
         "oldPrice": 249.90,
         "price": 226.90
@@ -183,7 +183,7 @@
       {
         "id": "6480fragmentos",
         "name": "6.480 Fragmentos",
-        "image": "https://i.ibb.co/2YcRJDX6/6480fragmentos.png",
+        "image": "/store/assets/images/png/6480fragmentos.png",
         "bonus": "+ 6.480 na Primeira Recarga",
         "oldPrice": 499.90,
         "price": 456.90
@@ -191,7 +191,7 @@
       {
         "id": "15680fragmentos",
         "name": "15.680 Fragmentos",
-        "image": "https://i.ibb.co/M5sVTJyN/aventurine.gif",
+        "image": "/store/assets/images/gif/aventurine.gif",
         "bonus": "+ 15.680 na Primeira Recarga",
         "oldPrice": 1009.40,
         "price": 880.90
@@ -201,7 +201,7 @@
       {
         "id": "suprimento",
         "name": "Suprimento do Expresso",
-        "image": "https://i.ibb.co/XkWBJKWH/suprimento.png",
+        "image": "/store/assets/images/png/suprimento.png",
         "oldPrice": 24.90,
         "price": 22.90,
         "hasTray": true,
@@ -219,7 +219,7 @@
       {
         "id": "unistar",
         "name": "Menu UniStar",
-        "image": "https://i.ibb.co/4wjFF2By/uni.png",
+        "image": "/store/assets/images/png/uni.png",
         "price": 11.90,
         "hasTray": true,
         "durations": [
@@ -253,7 +253,7 @@
       {
         "id": "uniwaves",
         "name": "Menu UniWaves",
-        "image": "https://i.ibb.co/4wjFF2By/uni.png",
+        "image": "/store/assets/images/png/uni.png",
         "price": 16.90,
         "hasTray": true,
         "durations": [
@@ -265,7 +265,7 @@
       {
         "id": "kittenwaves",
         "name": "Menu KittenWaves",
-        "image": "https://i.ibb.co/VcHz3kxF/kitten.gif",
+        "image": "/store/assets/images/png/kitten.gif",
         "price": 139.90,
         "hasTray": true,
         "durations": [
@@ -275,7 +275,7 @@
       {
         "id": "slashwuwa",
         "name": "Slash Bypass",
-        "image": "https://i.ibb.co/4ZdYnFPh/slash.png",
+        "image": "/store/assets/images/png/slash.png",
         "price": 21.90,
         "hasTray": true,
         "durations": [
@@ -298,7 +298,7 @@
       },
       {
         "id": "300monocromos",
-        "name": "300 monocromos",
+        "name": "300 Monocromos",
         "image": "/store/assets/images/png/300monocromos.png",
         "bonus": "+ 300 na Primeira Recarga",
         "oldPrice": 24.90,
@@ -367,7 +367,7 @@
       {
         "id": "unizone",
         "name": "Menu UniZone",
-        "image": "https://i.ibb.co/4wjFF2By/uni.png",
+        "image": "/store/assets/images/png/uni.png",
         "price": 16.90,
         "hasTray": true,
         "durations": [
@@ -395,7 +395,7 @@
       {
         "id": "slashzzz",
         "name": "Slash Bypass",
-        "image": "https://i.ibb.co/4ZdYnFPh/slash.png",
+        "image": "/store/assets/images/png/slash.png",
         "price": 21.90,
         "hasTray": true,
         "durations": [
