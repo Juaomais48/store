@@ -299,7 +299,7 @@
       {
         "id": "300monocromos",
         "name": "300 monocromos",
-        "image": "",
+        "image": "/store/assets/images/png/300monocromos.png",
         "bonus": "+ 300 na Primeira Recarga",
         "oldPrice": 24.90,
         "price": 22.90
@@ -307,7 +307,7 @@
       {
         "id": "980monocromos",
         "name": "980 Monocromos",
-        "image": "",
+        "image": "/store/assets/images/png/980monocromos.png",
         "bonus": "+ 980 na Primeira Recarga",
         "oldPrice": 79.90,
         "price": 66.90
@@ -315,7 +315,7 @@
       {
         "id": "1980monocromos",
         "name": "1.980 Monocromos",
-        "image": "",
+        "image": "/store/assets/images/png/1980monocromos.png",
         "bonus": "+ 1.980 na Primeira Recarga",
         "oldPrice": 149.90,
         "price": 136.90
@@ -323,7 +323,7 @@
       {
         "id": "3280monocromos",
         "name": "3.280 Monocromos",
-        "image": "",
+        "image": "/store/assets/images/png/3280monocromos.png",
         "bonus": "+ 3.280 na Primeira Recarga",
         "oldPrice": 249.90,
         "price": 226.90
@@ -331,7 +331,7 @@
       {
         "id": "6480monocromos",
         "name": "6.480 Monocromos",
-        "image": "",
+        "image": "/store/assets/images/png/6480monocromos.png",
         "bonus": "+ 6.480 na Primeira Recarga",
         "oldPrice": 499.90,
         "price": 456.90
@@ -339,7 +339,7 @@
       {
         "id": "15680monocromos",
         "name": "15.680 Monocromos",
-        "image": "",
+        "image": "/store/assets/images/gif/nicole.gif",
         "bonus": "+ 15.680 na Primeira Recarga",
         "oldPrice": 1009.40,
         "price": 880.90
@@ -349,7 +349,7 @@
       {
         "id": "interlaco",
         "name": "Assinatura da Interlaço",
-        "image": "",
+        "image": "/store/assets/images/png/interlaco.png",
         "oldPrice": 24.90,
         "price": 22.90,
         "hasTray": true,
