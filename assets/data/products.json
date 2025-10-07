@@ -231,7 +231,7 @@
       {
         "id": "mintysr",
         "name": "Menu Minty SR",
-        "image": "assets/images/webp/minty.webp",
+        "image": "/store/assets/images/webp/minty.webp",
         "price": 5.00,
         "hasTray": true,
         "durations": [
@@ -379,7 +379,7 @@
       {
         "id": "mintyzzz",
         "name": "Menu Minty ZZZ",
-        "image": "assets/images/webp/minty.webp",
+        "image": "/store/assets/images/webp/minty.webp",
         "price": 5.00,
         "hasTray": true,
         "durations": [

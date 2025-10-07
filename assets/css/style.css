@@ -161,7 +161,7 @@ body {
 
 /* Imagens de fundo para cada categoria */
 .category-card.genshin {
-    background-image: url('https://preview.redd.it/official-5th-anniversary-art-v0-wfk0y3s6jylf1.jpeg?auto=webp&s=932a9ea39c68081545591f492714b6d95506481f');
+    background-image: url('/store/assets/images/webp/genshin.webp');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -169,7 +169,7 @@ body {
 }
 
 .category-card.starrail {
-    background-image: url('https://upload-os-bbs.hoyolab.com/upload/2025/05/21/245802369/bb49598632f2c4b19dd0899106d6ae89_7567409126412328075.png?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_70');
+    background-image: url('/store/assets/images/webp/hsr.webp');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -177,7 +177,7 @@ body {
 }
 
 .category-card.wuwa {
-    background-image: url('https://images.steamusercontent.com/ugc/15579557362820798487/707530C68038D8D9ABEEBF3CEC2647652740D9BF/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+    background-image: url('/store/assets/images/webp/wuwa.webp');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -185,7 +185,7 @@ body {
 }
 
 .category-card.zzz {
-    background-image: url('https://blog.en.uptodown.com/files/2023/03/zenless-zone-zero-1.jpeg');
+    background-image: url('/store/assets/images/webp/zzz.webp');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
