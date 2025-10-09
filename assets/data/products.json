@@ -68,11 +68,11 @@
         "hasTray": true,
         "durations": [
           {"text": "30 dias", "oldPrice": 25.90, "price": 20.90},
-          {"text": "60 dias", "oldPrice": 51.80, "price": 43.90},
-          {"text": "90 dias", "oldPrice": 77.70, "price": 64.90},
-          {"text": "120 dias", "oldPrice": 103.60, "price": 86.90},
-          {"text": "150 dias", "oldPrice": 129.50, "price": 105.90},
-          {"text": "180 dias", "oldPrice": 155.40, "price": 123.90}
+          {"text": "60 dias", "oldPrice": 51.80, "price": 41.80},
+          {"text": "90 dias", "oldPrice": 77.70, "price": 62.70},
+          {"text": "120 dias", "oldPrice": 103.60, "price": 83.60},
+          {"text": "150 dias", "oldPrice": 129.50, "price": 104.50},
+          {"text": "180 dias", "oldPrice": 155.40, "price": 125.40}
         ]
       },
       {
