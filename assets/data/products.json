@@ -128,13 +128,13 @@
         "id": "antiaddict",
         "name": "Menu Antiaddict",
         "image": "/store/assets/images/png/antiaddict.png",
-        "price": 21.90,
+        "price": 10.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 21.90},
-          {"text": "3 dias", "price": 21.90},
-          {"text": "7 dias", "price": 32.90},
-          {"text": "30 dias", "price": 53.90}
+          {"text": "1 dias", "price": 10.90},
+          {"text": "3 dias", "price": 20.90},
+          {"text": "7 dias", "price": 35.90},
+          {"text": "30 dias", "price": 90.90}
         ]
       },
       {
