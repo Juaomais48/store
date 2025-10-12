@@ -162,7 +162,7 @@
         "image": "/store/assets/images/png/980fragmentos.png",
         "bonus": "+ 980 na Primeira Recarga",
         "oldPrice": 79.90,
-        "price": 66.90
+        "price": 69.90
       },
       {
         "id": "1980fragmentos",
@@ -170,7 +170,7 @@
         "image": "/store/assets/images/png/1980gragmentos.png",
         "bonus": "+ 1.980 na Primeira Recarga",
         "oldPrice": 149.90,
-        "price": 136.90
+        "price": 139.90
       },
       {
         "id": "3280fragmentos",
@@ -178,7 +178,7 @@
         "image": "/store/assets/images/png/3280fragmentos.png",
         "bonus": "+ 3.280 na Primeira Recarga",
         "oldPrice": 249.90,
-        "price": 226.90
+        "price": 229.90
       },
       {
         "id": "6480fragmentos",
@@ -186,7 +186,7 @@
         "image": "/store/assets/images/png/6480fragmentos.png",
         "bonus": "+ 6.480 na Primeira Recarga",
         "oldPrice": 499.90,
-        "price": 456.90
+        "price": 459.90
       },
       {
         "id": "15680fragmentos",
@@ -194,7 +194,7 @@
         "image": "/store/assets/images/gif/aventurine.gif",
         "bonus": "+ 15.680 na Primeira Recarga",
         "oldPrice": 1009.40,
-        "price": 880.90
+        "price": 900.90
       }
     ],
     "passes": [
@@ -206,12 +206,12 @@
         "price": 22.90,
         "hasTray": true,
         "durations": [
-          {"text": "30 dias", "oldPrice": 24.90, "price": 22.90},
-          {"text": "60 dias", "oldPrice": 49.80, "price": 45.90},
-          {"text": "90 dias", "oldPrice": 74.70, "price": 68.90},
-          {"text": "120 dias", "oldPrice": 99.60, "price": 88.90},
-          {"text": "150 dias", "oldPrice": 124.50, "price": 110.90},
-          {"text": "180 dias", "oldPrice": 149.40, "price": 136.90}
+          {"text": "30 dias", "oldPrice": 24.90, "price": 23.90},
+          {"text": "60 dias", "oldPrice": 49.80, "price": 47.80},
+          {"text": "90 dias", "oldPrice": 74.70, "price": 71.70},
+          {"text": "120 dias", "oldPrice": 99.60, "price": 95.60},
+          {"text": "150 dias", "oldPrice": 124.50, "price": 119.50},
+          {"text": "180 dias", "oldPrice": 149.40, "price": 143.40}
         ]
       }
     ],
