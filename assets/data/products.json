@@ -125,6 +125,19 @@
         ]
       },
       {
+        "id": "antiaddict",
+        "name": "Menu Antiaddict",
+        "image": "/store/assets/images/png/antiaddict.png",
+        "price": 21.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dias", "price": 21.90},
+          {"text": "3 dias", "price": 21.90},
+          {"text": "7 dias", "price": 32.90},
+          {"text": "30 dias", "price": 53.90}
+        ]
+      },
+      {
         "id": "slash",
         "name": "Slash Bypass",
         "image": "/store/assets/images/png/slash.png",
