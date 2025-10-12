@@ -203,7 +203,7 @@
         "name": "Suprimento do Expresso",
         "image": "/store/assets/images/png/suprimento.png",
         "oldPrice": 24.90,
-        "price": 22.90,
+        "price": 23.90,
         "hasTray": true,
         "durations": [
           {"text": "30 dias", "oldPrice": 24.90, "price": 23.90},
@@ -351,7 +351,7 @@
         "name": "Assinatura da Interlaço",
         "image": "/store/assets/images/png/interlaco.png",
         "oldPrice": 24.90,
-        "price": 22.90,
+        "price": 23.90,
         "hasTray": true,
         "durations": [
           {"text": "30 dias", "oldPrice": 24.90, "price": 23.90},
