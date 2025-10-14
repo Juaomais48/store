@@ -57,6 +57,8 @@ function showSubcategories(type) {
         document.getElementById('uni-subcategories').classList.add('active');
     } else if (type === 'shika') {
         document.getElementById('shika-subcategories').classList.add('active');
+    } else if (type === 'minty') {
+        document.getElementById('minty-subcategories').classList.add('active');
     }
 }
 
