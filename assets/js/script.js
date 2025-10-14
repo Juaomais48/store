@@ -59,6 +59,8 @@ function showSubcategories(type) {
         document.getElementById('shika-subcategories').classList.add('active');
     } else if (type === 'minty') {
         document.getElementById('minty-subcategories').classList.add('active');
+    } else if (type === 'slash') {
+        document.getElementById('slash-subcategories').classList.add('active');
     }
 }
 
