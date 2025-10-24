@@ -128,13 +128,13 @@
         "id": "antiaddict",
         "name": "Menu Antiaddict",
         "image": "/store/assets/images/png/antiaddict.png",
-        "price": 10.90,
+        "price": 12.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 10.90},
-          {"text": "3 dias", "price": 20.90},
-          {"text": "7 dias", "price": 35.90},
-          {"text": "30 dias", "price": 90.90}
+          {"text": "1 dias", "price": 12.90},
+          {"text": "3 dias", "price": 21.90},
+          {"text": "7 dias", "price": 36.90},
+          {"text": "30 dias", "price": 92.90}
         ]
       },
       {
@@ -183,7 +183,7 @@
         "image": "/store/assets/images/png/1980gragmentos.png",
         "bonus": "+ 1.980 na Primeira Recarga",
         "oldPrice": 149.90,
-        "price": 139.90
+        "price": 144.90
       },
       {
         "id": "3280fragmentos",
@@ -199,7 +199,7 @@
         "image": "/store/assets/images/png/6480fragmentos.png",
         "bonus": "+ 6.480 na Primeira Recarga",
         "oldPrice": 499.90,
-        "price": 459.90
+        "price": 449.90
       },
       {
         "id": "15680fragmentos",
