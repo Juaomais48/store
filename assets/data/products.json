@@ -191,7 +191,7 @@
         "image": "/store/assets/images/png/3280fragmentos.png",
         "bonus": "+ 3.280 na Primeira Recarga",
         "oldPrice": 249.90,
-        "price": 229.90
+        "price": 224.90
       },
       {
         "id": "6480fragmentos",
@@ -199,7 +199,7 @@
         "image": "/store/assets/images/png/6480fragmentos.png",
         "bonus": "+ 6.480 na Primeira Recarga",
         "oldPrice": 499.90,
-        "price": 449.90
+        "price": 434.90
       },
       {
         "id": "15680fragmentos",
@@ -207,7 +207,7 @@
         "image": "/store/assets/images/gif/aventurine.gif",
         "bonus": "+ 15.680 na Primeira Recarga",
         "oldPrice": 1009.40,
-        "price": 900.90
+        "price": 876.90
       }
     ],
     "passes": [

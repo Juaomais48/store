@@ -245,7 +245,7 @@ function toggleFAQ(question) {
 }
 // Taxas de juros por parcela
 const taxasJuros = {
-    1: 4.2,
+    1: 4.20,
     2: 6.09,
     3: 7.01,
     4: 7.91,
