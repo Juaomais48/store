@@ -331,7 +331,7 @@
         "image": "/store/assets/images/png/1980monocromos.png",
         "bonus": "+ 1.980 na Primeira Recarga",
         "oldPrice": 149.90,
-        "price": 139.90
+        "price": 142.90
       },
       {
         "id": "3280monocromos",
@@ -339,7 +339,7 @@
         "image": "/store/assets/images/png/3280monocromos.png",
         "bonus": "+ 3.280 na Primeira Recarga",
         "oldPrice": 249.90,
-        "price": 229.90
+        "price": 224.90
       },
       {
         "id": "6480monocromos",
@@ -347,7 +347,7 @@
         "image": "/store/assets/images/png/6480monocromos.png",
         "bonus": "+ 6.480 na Primeira Recarga",
         "oldPrice": 499.90,
-        "price": 459.90
+        "price": 434.90
       },
       {
         "id": "15680monocromos",
@@ -355,7 +355,7 @@
         "image": "/store/assets/images/gif/nicole.gif",
         "bonus": "+ 15.680 na Primeira Recarga",
         "oldPrice": 1009.40,
-        "price": 900.90
+        "price": 876.90
       }
     ],
     "passes": [
