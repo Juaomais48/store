@@ -248,13 +248,13 @@
         "price": 5.00,
         "hasTray": true,
         "durations": [
-          {"text": "1 dia", "price": 5.00},
-          {"text": "7 dias", "price": 10.90},
+          {"text": "1 dia", "price": 5.90},
+          {"text": "7 dias", "price": 12.90},
           {"text": "14 dias", "price": 15.90},
-          {"text": "30 dias", "price": 22.90},
+          {"text": "30 dias", "price": 24.90},
           {"text": "90 dias", "price": 50.90},
-          {"text": "1 ano", "price": 75.90},
-          {"text": "Acesso Vitalício", "price": 180.90}
+          {"text": "1 ano", "price": 82.90},
+          {"text": "Acesso Vitalício", "price": 190.90}
         ]
       }
     ]
@@ -396,13 +396,13 @@
         "price": 5.00,
         "hasTray": true,
         "durations": [
-          {"text": "1 dia", "price": 5.00},
-          {"text": "7 dias", "price": 10.90},
+          {"text": "1 dia", "price": 5.90},
+          {"text": "7 dias", "price": 12.90},
           {"text": "14 dias", "price": 15.90},
-          {"text": "30 dias", "price": 22.90},
+          {"text": "30 dias", "price": 24.90},
           {"text": "90 dias", "price": 50.90},
-          {"text": "1 ano", "price": 75.90},
-          {"text": "Acesso Vitalício", "price": 180.90}
+          {"text": "1 ano", "price": 82.90},
+          {"text": "Acesso Vitalício", "price": 190.90}
         ]
       },
       {
