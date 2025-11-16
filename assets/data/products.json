@@ -50,10 +50,10 @@
         "price": 400.90
       },
       {
-        "id": "15680cristais",
-        "name": "15.680 Cristais",
+        "id": "13080cristais",
+        "name": "13.080 Cristais",
         "image": "/store/assets/images/gif/money.gif",
-        "bonus": "+ 15.680 na Primeira Recarga",
+        "bonus": "+ 13.080 na Primeira Recarga",
         "oldPrice": 1017.40,
         "price": 800.90
       }
@@ -202,10 +202,10 @@
         "price": 434.90
       },
       {
-        "id": "15680fragmentos",
-        "name": "15.680 Fragmentos",
+        "id": "13080fragmentos",
+        "name": "13.080 Fragmentos",
         "image": "/store/assets/images/gif/aventurine.gif",
-        "bonus": "+ 15.680 na Primeira Recarga",
+        "bonus": "+ 13.080 na Primeira Recarga",
         "oldPrice": 1009.40,
         "price": 876.90
       }
