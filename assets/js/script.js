@@ -546,11 +546,11 @@ function preserveEmptyCategories() {
     const wuwaHasLunites = productsData.wuwa?.lunites?.length > 0;
     const wuwaHasPasses = productsData.wuwa?.passes?.length > 0;
 
-    const dnaHasPlumulas = productsData.wuwa?.lunites?.length > 0;
-    const dnaHasPasses = productsData.wuwa?.passes?.length > 0;
+    const dnaHasPlumulas = productsData.dna?.plumulas?.length > 0;
+    const dnaHasPasses = productsData.dna?.passes?.length > 0;
 
-    const bpHasOrbesRosa = productsData.wuwa?.lunites?.length > 0;
-    const bpHasPasses = productsData.wuwa?.passes?.length > 0;
+    const bpHasOrbesRosa = productsData.bp?.orbes?.length > 0;
+    const bpHasPasses = productsData.bp?.passes?.length > 0;
 
     // Restaurar conteúdo original se não houver dados no JSON
     if (wuwaLunites && !wuwaHasLunites) {
