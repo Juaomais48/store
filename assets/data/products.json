@@ -418,5 +418,75 @@
         ]
       }
     ]
+  },
+  "dna": {
+    "plumulas": [],
+    "passes": [],
+    "hacks": [
+      {
+        "id": "unidna",
+        "name": "Menu UniDna",
+        "image": "/store/assets/images/png/uni.png",
+        "price": 16.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "2 dias", "price": 16.90},
+          {"text": "7 dias", "price": 28.90},
+          {"text": "30 dias", "price": 55.90}
+        ]
+      },
+      {
+        "id": "meowabyss",
+        "name": "Menu Meow Abyss",
+        "image": "/store/assets/images/gif/kitten.gif",
+        "price": 139.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "Meow Abyss - Vitalício", "price": 139.90}
+        ]
+      },
+      {
+        "id": "mintydna",
+        "name": "Menu Minty DNA",
+        "image": "/store/assets/images/webp/minty.webp",
+        "price": 5.00,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dia", "price": 10.90},
+          {"text": "7 dias", "price": 18.90},
+          {"text": "30 dias", "price": 30.90}
+        ]
+      },
+      {
+        "id": "slashwuwa",
+        "name": "Menu Slash",
+        "image": "/store/assets/images/png/slash.png",
+        "price": 21.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 21.90},
+          {"text": "7 dias", "price": 32.90},
+          {"text": "30 dias", "price": 53.90}
+        ]
+      }
+    ]
+  },
+  "bp": {
+    "orbes": [],
+    "passes": [],
+    "hacks": [
+      {
+        "id": "mintybp",
+        "name": "Menu Minty BP",
+        "image": "/store/assets/images/webp/minty.webp",
+        "price": 5.00,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dia", "price": 15.90},
+          {"text": "7 dias", "price": 24.90},
+          {"text": "30 dias", "price": 50.90}
+        ]
+      }
+    ]
   }
 }
