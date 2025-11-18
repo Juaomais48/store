@@ -1,7 +1,34 @@
-// Variáveis globais
+// ============================================
+// VARIÁVEIS GLOBAIS
+// ============================================
 let productsData = {};
 let currentCheckoutData = null;
 
+// ============================================
+// CONFIGURAÇÕES E CONSTANTES
+// ============================================
+const taxasJuros = {
+    1: 4.20,
+    2: 6.09,
+    3: 7.01,
+    4: 7.91,
+    5: 8.80,
+    6: 9.67,
+    7: 12.59,
+    8: 13.42,
+    9: 14.25,
+    10: 15.06,
+    11: 15.87,
+    12: 16.66
+};
+
+// ============================================
+// FUNÇÕES DE NAVEGAÇÃO E CATEGORIAS
+// ============================================
+
+/**
+ * Exibe produtos de uma categoria específica
+ */
 function showProductsC(category) {
     document.querySelectorAll('.category-card').forEach(card => {
         card.classList.remove('active');
@@ -12,19 +39,13 @@ function showProductsC(category) {
     });
 
     event.target.closest('.category-card').classList.add('active');
-
     document.getElementById(category).classList.add('active');
     smoothScrollToTargetHome();
 }
 
-function openPopup() {
-    document.getElementById('popupOverlay').style.display = 'flex';
-}
-
-function closePopup() {
-    document.getElementById('popupOverlay').style.display = 'none';
-}
-
+/**
+ * Exibe subcategorias de um tipo de cheat
+ */
 function showSubcategories(type) {
     // Remove active de todos os botões principais
     document.querySelectorAll('.cheat-btn').forEach(btn => {
@@ -46,7 +67,6 @@ function showSubcategories(type) {
         btn.classList.remove('active');
     });
 
-    // Fecha todas as categorias de features
     closeAllFeatureCategories();
 
     // Ativa o botão principal clicado
@@ -64,67 +84,56 @@ function showSubcategories(type) {
     }
 }
 
-// Função para mostrar cheat específico (para subcategorias)
+/**
+ * Mostra cheat específico (para subcategorias)
+ */
 function showCheat(cheatId) {
-    // Remove active de todos os botões de subcategoria
     document.querySelectorAll('.subcategory-btn').forEach(btn => {
         btn.classList.remove('active');
     });
 
-    // Remove active de todos os conteúdos
     document.querySelectorAll('.cheat-content').forEach(content => {
         content.classList.remove('active');
     });
 
-    // Fecha todas as categorias de features
     closeAllFeatureCategories();
 
-    // Ativa o botão de subcategoria clicado
     event.currentTarget.classList.add('active');
-
-    // Mostra o conteúdo do cheat
     document.getElementById(cheatId).classList.add('active');
-
     smoothScrollToTarget();
 }
 
-// Função para mostrar cheat direto (para categorias sem subcategorias como Slash)
+/**
+ * Mostra cheat direto (para categorias sem subcategorias como Slash)
+ */
 function showCheatDirect(cheatId) {
-    // Remove active de todos os botões principais
     document.querySelectorAll('.cheat-btn').forEach(btn => {
         btn.classList.remove('active');
     });
 
-    // Remove active de todas as subcategorias
     document.querySelectorAll('.subcategories').forEach(sub => {
         sub.classList.remove('active');
     });
 
-    // Remove active de todos os conteúdos
     document.querySelectorAll('.cheat-content').forEach(content => {
         content.classList.remove('active');
     });
 
-    // Remove active de todos os botões de subcategoria
     document.querySelectorAll('.subcategory-btn').forEach(btn => {
         btn.classList.remove('active');
     });
 
-    // Fecha todas as categorias de features
     closeAllFeatureCategories();
 
-    // Ativa o botão principal clicado
     event.currentTarget.classList.add('active');
-
-    // Mostra o conteúdo do cheat
     document.getElementById(cheatId).classList.add('active');
-
     smoothScrollToTargetDirect();
 }
 
-// Função para voltar para a seleção de categorias principais
+/**
+ * Volta para a seleção de categorias principais
+ */
 function backToMainCategories() {
-    // Remove active de todos os elementos
     document.querySelectorAll('.cheat-btn').forEach(btn => {
         btn.classList.remove('active');
     });
@@ -144,7 +153,13 @@ function backToMainCategories() {
     closeAllFeatureCategories();
 }
 
-// Função para expandir/recolher categorias de features
+// ============================================
+// FUNÇÕES DE FEATURES
+// ============================================
+
+/**
+ * Expande/recolhe categorias de features
+ */
 function toggleCategory(element) {
     const category = element.parentElement;
     const isActive = category.classList.contains('active');
@@ -163,12 +178,18 @@ function toggleCategory(element) {
     }
 }
 
-// Fecha todas as categorias quando um novo cheat é selecionado
+/**
+ * Fecha todas as categorias quando um novo cheat é selecionado
+ */
 function closeAllFeatureCategories() {
     document.querySelectorAll('.feature-category').forEach(category => {
         category.classList.remove('active');
     });
 }
+
+// ============================================
+// FUNÇÕES DE SCROLL SUAVE
+// ============================================
 
 function smoothScrollToTargetHome() {
     setTimeout(() => {
@@ -179,7 +200,7 @@ function smoothScrollToTargetHome() {
                 block: 'start'
             });
         }
-    }, 100); // 300ms de delay
+    }, 100);
 }
 
 function smoothScrollToTarget() {
@@ -191,7 +212,7 @@ function smoothScrollToTarget() {
                 block: 'start'
             });
         }
-    }, 100); // 300ms de delay
+    }, 100);
 }
 
 function smoothScrollToTargetDirect() {
@@ -203,9 +224,16 @@ function smoothScrollToTargetDirect() {
                 block: 'start'
             });
         }
-    }, 100); // 300ms de delay
+    }, 100);
 }
 
+// ============================================
+// FUNÇÕES FAQ
+// ============================================
+
+/**
+ * Exibe categoria específica do FAQ
+ */
 function showFAQ(category) {
     // Remove active class from all buttons
     document.querySelectorAll('.category-btn').forEach(btn => {
@@ -229,6 +257,9 @@ function showFAQ(category) {
     });
 }
 
+/**
+ * Expande/recolhe item do FAQ
+ */
 function toggleFAQ(question) {
     const faqItem = question.closest('.faq-item');
     const isActive = faqItem.classList.contains('active');
@@ -243,22 +274,14 @@ function toggleFAQ(question) {
         faqItem.classList.add('active');
     }
 }
-// Taxas de juros por parcela
-const taxasJuros = {
-    1: 4.20,
-    2: 6.09,
-    3: 7.01,
-    4: 7.91,
-    5: 8.80,
-    6: 9.67,
-    7: 12.59,
-    8: 13.42,
-    9: 14.25,
-    10: 15.06,
-    11: 15.87,
-    12: 16.66
-};
 
+// ============================================
+// FUNÇÕES DE CÁLCULO DE JUROS
+// ============================================
+
+/**
+ * Calcula juros baseado no valor e parcelas
+ */
 function calcularJuros() {
     const valorInput = document.getElementById('valor');
     const parcelasSelect = document.getElementById('parcelas');
@@ -292,6 +315,9 @@ function calcularJuros() {
     atualizarExemplos(valorOriginal);
 }
 
+/**
+ * Atualiza exemplos de valores com juros
+ */
 function atualizarExemplos(valor) {
     for (let i = 1; i <= 12; i++) {
         const valorComJuros = valor * (1 + (taxasJuros[i] / 100));
@@ -299,74 +325,140 @@ function atualizarExemplos(valor) {
     }
 }
 
+/**
+ * Formata valor para moeda brasileira
+ */
 function formatarMoeda(valor) {
     return 'R$ ' + valor.toFixed(2).replace('.', ',').replace(/\d(?=(\d{3})+,)/g, '$&.');
 }
 
-// Controle de exibição de produtos por categoria
-function showProducts(category) {
-    const sections = document.querySelectorAll('.products-section');
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
-    
-    const selectedSection = document.getElementById(category);
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
-    }
-}
+// ============================================
+// FUNÇÕES DE POPUP
+// ============================================
 
-// Popup de contato
+/**
+ * Abre popup de contato
+ */
 function openPopup() {
     document.getElementById('popupOverlay').style.display = 'flex';
 }
 
+/**
+ * Fecha popup de contato
+ */
 function closePopup() {
     document.getElementById('popupOverlay').style.display = 'none';
 }
 
-// Popup de checkout
-function openCheckout(productData) {
-    const checkoutPopup = document.getElementById('checkoutPopup');
-    const checkoutImage = document.getElementById('checkoutImage');
-    const checkoutName = document.getElementById('checkoutName');
-    const checkoutDuration = document.getElementById('checkoutDuration');
-    const checkoutPrice = document.getElementById('checkoutPrice');
+/**
+ * Abre popup de checkout com dados do produto
+ */
+function openCheckout(game, category, productId) {
+    const product = productsData[game]?.[category]?.find(p => p.id === productId);
+    if (!product) return;
     
-    checkoutImage.src = productData.image;
-    checkoutImage.alt = productData.name;
-    checkoutName.textContent = productData.name;
+    document.getElementById('checkoutImage').src = product.image;
+    document.getElementById('checkoutName').textContent = product.name;
     
-    if (productData.duration) {
-        checkoutDuration.textContent = productData.duration;
-        checkoutDuration.style.display = 'block';
+    // Se não tem tray, usar preço base
+    if (!product.hasTray) {
+        document.getElementById('checkoutDuration').textContent = '';
+        document.getElementById('checkoutPrice').textContent = `R$ ${product.price.toFixed(2)}`;
+        
+        // Armazenar dados da compra
+        currentCheckoutData = {
+            game: game,
+            category: category,
+            productId: productId,
+            productName: product.name,
+            duration: '',
+            price: product.price,
+            image: product.image
+        };
     } else {
-        checkoutDuration.style.display = 'none';
+        // Se tem tray, usar primeira opção como padrão
+        const firstDuration = product.durations[0];
+        document.getElementById('checkoutDuration').textContent = firstDuration.text;
+        document.getElementById('checkoutPrice').textContent = `R$ ${firstDuration.price.toFixed(2)}`;
+        
+        // Armazenar dados da compra
+        currentCheckoutData = {
+            game: game,
+            category: category,
+            productId: productId,
+            productName: product.name,
+            duration: firstDuration.text,
+            price: firstDuration.price,
+            image: product.image
+        };
     }
     
-    checkoutPrice.textContent = productData.price;
-    
-    checkoutPopup.style.display = 'flex';
+    document.getElementById('checkoutPopup').style.display = 'flex';
 }
 
+/**
+ * Abre checkout com duração específica
+ */
+function openCheckoutWithDuration(game, category, productId, durationText, durationPrice, durationOldPrice) {
+    const product = productsData[game]?.[category]?.find(p => p.id === productId);
+    if (!product) return;
+    
+    document.getElementById('checkoutImage').src = product.image;
+    document.getElementById('checkoutName').textContent = product.name;
+    document.getElementById('checkoutDuration').textContent = durationText;
+    document.getElementById('checkoutPrice').textContent = `R$ ${durationPrice.toFixed(2)}`;
+    
+    document.getElementById('checkoutPopup').style.display = 'flex';
+    
+    // Armazenar os dados da compra para uso posterior
+    currentCheckoutData = {
+        game: game,
+        category: category,
+        productId: productId,
+        productName: product.name,
+        duration: durationText,
+        price: durationPrice,
+        image: product.image
+    };
+}
+
+/**
+ * Fecha popup de checkout
+ */
 function closeCheckout() {
     document.getElementById('checkoutPopup').style.display = 'none';
 }
 
-// Fechar popups ao clicar fora
-window.onclick = function(event) {
-    const popupOverlay = document.getElementById('popupOverlay');
-    const checkoutPopup = document.getElementById('checkoutPopup');
+/**
+ * Seleciona duração específica
+ */
+function selectDuration(element, game, category, productId, durationText) {
+    const product = productsData[game]?.[category]?.find(p => p.id === productId);
+    if (!product || !product.durations) return;
     
-    if (event.target === popupOverlay) {
-        closePopup();
-    }
-    if (event.target === checkoutPopup) {
-        closeCheckout();
+    const duration = product.durations.find(d => d.text === durationText);
+    if (!duration) return;
+    
+    // Atualizar UI para mostrar seleção
+    document.querySelectorAll('.duration-option').forEach(opt => {
+        opt.classList.remove('selected');
+    });
+    element.classList.add('selected');
+    
+    // Atualizar preço principal se estiver no checkout
+    if (document.getElementById('checkoutPopup').style.display === 'flex') {
+        document.getElementById('checkoutDuration').textContent = durationText;
+        document.getElementById('checkoutPrice').textContent = `R$ ${duration.price.toFixed(2)}`;
     }
 }
 
-// Função auxiliar para obter dados do produto
+// ============================================
+// FUNÇÕES DE PRODUTOS
+// ============================================
+
+/**
+ * Obtém dados do produto
+ */
 function getProductData(productMain, product = null) {
     const productInfo = productMain.querySelector('.product-info');
     const img = productMain.querySelector('img');
@@ -391,98 +483,9 @@ function getProductData(productMain, product = null) {
     };
 }
 
-// Inicialização dos botões de compra
-document.addEventListener('DOMContentLoaded', function() {   
-    // Adicionar event listeners para TODOS os botões de compra
-    const allBuyButtons = document.querySelectorAll('.buy-btn');
-    allBuyButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const product = this.closest('.product');
-            const productMain = this.closest('.product-main');
-            
-            // Se o produto tem tray, verificar se está aberta
-            if (product && product.classList.contains('has-tray')) {
-                const tray = product.querySelector('.product-tray');
-                
-                // Se a tray estiver fechada, abrir o checkout com primeira opção
-                if (!tray || tray.style.display !== 'block') {
-                    const productData = getProductData(productMain, product);
-                    openCheckout(productData);
-                    return;
-                }
-                
-                // Se a tray estiver aberta, apenas fecha (o clique nas opções abrirá o checkout)
-                tray.style.display = 'none';
-            } else {
-                // Produto sem tray - compra direta
-                const productData = getProductData(productMain);
-                openCheckout(productData);
-            }
-        });
-    });
-    
-    // Adicionar event listeners para indicadores de tray (clique na seta)
-    const trayIndicators = document.querySelectorAll('.tray-indicator');
-    trayIndicators.forEach(indicator => {
-        indicator.addEventListener('click', function(e) {
-            e.stopPropagation(); // Evitar que dispare o evento do botão de compra
-            const product = this.closest('.product');
-            const tray = product.querySelector('.product-tray');
-            
-            // Fechar outras trays abertas
-            document.querySelectorAll('.product-tray').forEach(otherTray => {
-                if (otherTray !== tray) {
-                    otherTray.style.display = 'none';
-                }
-            });
-            
-            // Toggle da tray atual
-            if (tray.style.display === 'block') {
-                tray.style.display = 'none';
-            } else {
-                tray.style.display = 'block';
-            }
-        });
-    });
-    
-    // Adicionar event listeners para opções de duração
-    const durationOptions = document.querySelectorAll('.duration-option');
-    durationOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const product = this.closest('.product');
-            const productMain = product.querySelector('.product-main');
-            const productInfo = productMain.querySelector('.product-info');
-            const img = productMain.querySelector('img');
-            
-            const productData = {
-                name: productInfo.querySelector('.product-name').textContent,
-                price: this.querySelector('.duration-price').textContent,
-                image: img.src,
-                duration: this.querySelector('.duration-text').textContent
-            };
-            
-            // Fechar a tray
-            product.querySelector('.product-tray').style.display = 'none';
-            
-            // Abrir checkout
-            openCheckout(productData);
-        });
-    });
-});
-
-// Calcular automaticamente ao pressionar Enter no campo de valor
-const valorInput = document.getElementById('valor');
-if (valorInput) {
-    valorInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            calcularJuros();
-        }
-    });
-}
-
-// Carregar dados dos produtos
+/**
+ * Carrega dados dos produtos do JSON
+ */
 async function loadProductsData() {
     try {
         const response = await fetch('/store/assets/data/products.json');
@@ -493,11 +496,13 @@ async function loadProductsData() {
     }
 }
 
-// Inicializar produtos na página
+/**
+ * Inicializa produtos na página
+ */
 function initializeProducts() {
     // Inicializar produtos do Genshin Impact
     initializeCategoryProducts('genshin', 'cristais', 'Cristais Gênesis');
-    initializeCategoryProducts('genshin', 'passes', 'Passes e Bençãos');
+    initializeCategoryProducts('genshin', 'passes', 'Passes e Bênçãos');
     initializeCategoryProducts('genshin', 'hacks', 'Hacks e Bypass');
     
     // Inicializar produtos do Star Rail
@@ -512,20 +517,40 @@ function initializeProducts() {
     initializeCategoryProducts('zzz', 'monocromos', 'Monocromos');
     initializeCategoryProducts('zzz', 'passes', 'Passes e Assinaturas');
     initializeCategoryProducts('zzz', 'hacks', 'Hacks e Bypass');
+
+    // Inicializar produtos do Duel Night Abyss
+    initializeCategoryProducts('dna', 'hacks', 'Hacks e Bypass');
+
+    // Inicializar produtos do Blue Protocol
+    initializeCategoryProducts('bp', 'hacks', 'Hacks e Bypass');
     
     // Manter conteúdo original para categorias vazias
     preserveEmptyCategories();
 }
 
-// Manter o conteúdo original para categorias sem dados no JSON
+/**
+ * Mantém o conteúdo original para categorias sem dados no JSON
+ */
 function preserveEmptyCategories() {
     // Para Wuwa - Lunites e Passes
     const wuwaLunites = document.querySelector('#wuwa .product-list h4:contains("Lunites")')?.closest('.product-list');
     const wuwaPasses = document.querySelector('#wuwa .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
+
+    const dnaPlumulas = document.querySelector('#dna .product-list h4:contains("Plumulas")')?.closest('.product-list');
+    const dnaPasses = document.querySelector('#dna .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
+
+    const bpOrbesRosa = document.querySelector('#bp .product-list h4:contains("Orbes Rosa")')?.closest('.product-list');
+    const bpPasses = document.querySelector('#bp .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
     
     // Verificar se essas categorias têm dados no JSON
     const wuwaHasLunites = productsData.wuwa?.lunites?.length > 0;
     const wuwaHasPasses = productsData.wuwa?.passes?.length > 0;
+
+    const dnaHasPlumulas = productsData.wuwa?.lunites?.length > 0;
+    const dnaHasPasses = productsData.wuwa?.passes?.length > 0;
+
+    const bpHasOrbesRosa = productsData.wuwa?.lunites?.length > 0;
+    const bpHasPasses = productsData.wuwa?.passes?.length > 0;
 
     // Restaurar conteúdo original se não houver dados no JSON
     if (wuwaLunites && !wuwaHasLunites) {
@@ -535,9 +560,27 @@ function preserveEmptyCategories() {
     if (wuwaPasses && !wuwaHasPasses) {
         wuwaPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
     }
+
+    if (dnaPlumulas && !dnaHasPlumulas) {
+        dnaPlumulas.innerHTML = '<h4>Plumulas</h4><div class="product-none"><p>Em Breve.</p></div>';
+    }
+
+    if (dnaPasses && !dnaHasPasses) {
+        dnaPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
+    }
+
+    if (bpOrbesRosa && !bpHasOrbesRosa) {
+        bpOrbesRosa.innerHTML = '<h4>Orbes Rosa</h4><div class="product-none"><p>Em Breve.</p></div>';
+    }
+
+    if (bpPasses && !bpHasPasses) {
+        bpPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
+    }
 }
 
-// Inicializar produtos de uma categoria específica
+/**
+ * Inicializa produtos de uma categoria específica
+ */
 function initializeCategoryProducts(game, category, title) {
     const section = document.getElementById(game);
     if (!section) return;
@@ -573,7 +616,9 @@ function initializeCategoryProducts(game, category, title) {
     });
 }
 
-// Criar elemento de produto
+/**
+ * Cria elemento de produto
+ */
 function createProductElement(product, game, category) {
     const productDiv = document.createElement('div');
     productDiv.className = `product ${product.hasTray ? 'has-tray' : ''}`;
@@ -622,121 +667,144 @@ function createProductElement(product, game, category) {
     return productDiv;
 }
 
-// Função para abrir checkout com dados do JSON
-function openCheckout(game, category, productId) {
-    const product = productsData[game]?.[category]?.find(p => p.id === productId);
-    if (!product) return;
+// ============================================
+// EVENT LISTENERS
+// ============================================
+
+/**
+ * Fechar popups ao clicar fora
+ */
+window.onclick = function(event) {
+    const popupOverlay = document.getElementById('popupOverlay');
+    const checkoutPopup = document.getElementById('checkoutPopup');
     
-    document.getElementById('checkoutImage').src = product.image;
-    document.getElementById('checkoutName').textContent = product.name;
-    
-    // Se não tem tray, usar preço base
-    if (!product.hasTray) {
-        document.getElementById('checkoutDuration').textContent = '';
-        document.getElementById('checkoutPrice').textContent = `R$ ${product.price.toFixed(2)}`;
-        
-        // Armazenar dados da compra
-        currentCheckoutData = {
-            game: game,
-            category: category,
-            productId: productId,
-            productName: product.name,
-            duration: '',
-            price: product.price,
-            image: product.image
-        };
-    } else {
-        // Se tem tray, usar primeira opção como padrão
-        const firstDuration = product.durations[0];
-        document.getElementById('checkoutDuration').textContent = firstDuration.text;
-        document.getElementById('checkoutPrice').textContent = `R$ ${firstDuration.price.toFixed(2)}`;
-        
-        // Armazenar dados da compra
-        currentCheckoutData = {
-            game: game,
-            category: category,
-            productId: productId,
-            productName: product.name,
-            duration: firstDuration.text,
-            price: firstDuration.price,
-            image: product.image
-        };
+    if (event.target === popupOverlay) {
+        closePopup();
     }
-    
-    document.getElementById('checkoutPopup').style.display = 'flex';
-}
-
-// Função para abrir checkout com duração específica
-function openCheckoutWithDuration(game, category, productId, durationText, durationPrice, durationOldPrice) {
-    const product = productsData[game]?.[category]?.find(p => p.id === productId);
-    if (!product) return;
-    
-    document.getElementById('checkoutImage').src = product.image;
-    document.getElementById('checkoutName').textContent = product.name;
-    document.getElementById('checkoutDuration').textContent = durationText;
-    document.getElementById('checkoutPrice').textContent = `R$ ${durationPrice.toFixed(2)}`;
-    
-    document.getElementById('checkoutPopup').style.display = 'flex';
-    
-    // Armazenar os dados da compra para uso posterior
-    currentCheckoutData = {
-        game: game,
-        category: category,
-        productId: productId,
-        productName: product.name,
-        duration: durationText,
-        price: durationPrice,
-        image: product.image
-    };
-}
-
-// Função para selecionar duração
-function selectDuration(element, game, category, productId, durationText) {
-    const product = productsData[game]?.[category]?.find(p => p.id === productId);
-    if (!product || !product.durations) return;
-    
-    const duration = product.durations.find(d => d.text === durationText);
-    if (!duration) return;
-    
-    // Atualizar UI para mostrar seleção
-    document.querySelectorAll('.duration-option').forEach(opt => {
-        opt.classList.remove('selected');
-    });
-    element.classList.add('selected');
-    
-    // Atualizar preço principal se estiver no checkout
-    if (document.getElementById('checkoutPopup').style.display === 'flex') {
-        document.getElementById('checkoutDuration').textContent = durationText;
-        document.getElementById('checkoutPrice').textContent = `R$ ${duration.price.toFixed(2)}`;
+    if (event.target === checkoutPopup) {
+        closeCheckout();
     }
 }
 
-// Carregar dados quando a página carregar
+/**
+ * Inicialização quando o DOM estiver pronto
+ */
 document.addEventListener('DOMContentLoaded', function() {
+    // Carregar dados dos produtos
     loadProductsData();
+    
+    // Inicializar estado limpo
+    closeAllFeatureCategories();
+    
+    // Event listeners para botões de compra
+    const allBuyButtons = document.querySelectorAll('.buy-btn');
+    allBuyButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const product = this.closest('.product');
+            const productMain = this.closest('.product-main');
+            
+            // Se o produto tem tray, verificar se está aberta
+            if (product && product.classList.contains('has-tray')) {
+                const tray = product.querySelector('.product-tray');
+                
+                // Se a tray estiver fechada, abrir o checkout com primeira opção
+                if (!tray || tray.style.display !== 'block') {
+                    const productData = getProductData(productMain, product);
+                    openCheckout(productData);
+                    return;
+                }
+                
+                // Se a tray estiver aberta, apenas fecha (o clique nas opções abrirá o checkout)
+                tray.style.display = 'none';
+            } else {
+                // Produto sem tray - compra direta
+                const productData = getProductData(productMain);
+                openCheckout(productData);
+            }
+        });
+    });
+    
+    // Event listeners para indicadores de tray
+    const trayIndicators = document.querySelectorAll('.tray-indicator');
+    trayIndicators.forEach(indicator => {
+        indicator.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const product = this.closest('.product');
+            const tray = product.querySelector('.product-tray');
+            
+            // Fechar outras trays abertas
+            document.querySelectorAll('.product-tray').forEach(otherTray => {
+                if (otherTray !== tray) {
+                    otherTray.style.display = 'none';
+                }
+            });
+            
+            // Toggle da tray atual
+            if (tray.style.display === 'block') {
+                tray.style.display = 'none';
+            } else {
+                tray.style.display = 'block';
+            }
+        });
+    });
+    
+    // Event listeners para opções de duração
+    const durationOptions = document.querySelectorAll('.duration-option');
+    durationOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const product = this.closest('.product');
+            const productMain = product.querySelector('.product-main');
+            const productInfo = productMain.querySelector('.product-info');
+            const img = productMain.querySelector('img');
+            
+            const productData = {
+                name: productInfo.querySelector('.product-name').textContent,
+                price: this.querySelector('.duration-price').textContent,
+                image: img.src,
+                duration: this.querySelector('.duration-text').textContent
+            };
+            
+            // Fechar a tray
+            product.querySelector('.product-tray').style.display = 'none';
+            
+            // Abrir checkout
+            openCheckout(productData);
+        });
+    });
+    
+    // Enter no campo de valor para calcular juros
+    const valorInput = document.getElementById('valor');
+    if (valorInput) {
+        valorInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calcularJuros();
+            }
+        });
+    }
+    
+    // Fechar popup ao clicar fora
+    const popupOverlay = document.getElementById('popupOverlay');
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', function(event) {
+            if (event.target === this) {
+                closePopup();
+            }
+        });
+    }
+    
+    // Fechar popup com ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePopup();
+        }
+    });
 });
 
-// Inicializar exemplos com R$ 100,00
-window.onload = function () {
+/**
+ * Inicialização após carregamento completo da página
+ */
+window.onload = function() {
     atualizarExemplos(100);
 };
-
-// Inicialização - estado inicial limpo
-document.addEventListener('DOMContentLoaded', function () {
-    // Todas as categorias começam fechadas
-    closeAllFeatureCategories();
-});
-
-// Fechar a popup ao clicar fora dela
-document.getElementById('popupOverlay').addEventListener('click', function (event) {
-    if (event.target === this) {
-        closePopup();
-    }
-});
-
-// Fechar a popup com a tecla ESC
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-        closePopup();
-    }
-});
