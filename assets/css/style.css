@@ -790,8 +790,8 @@ body {
 
 /* Cheat Categories */
 .cheat-categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 40px;
 }
@@ -805,6 +805,11 @@ body {
     transition: all 0.3s ease;
     text-align: center;
     backdrop-filter: blur(10px);
+}
+
+.cheat-categories .cheat-btn {
+    flex: 1;
+    min-width: 180px;
 }
 
 .cheat-btn:hover {
@@ -843,14 +848,14 @@ body {
 /* Subcategories */
 .subcategories {
     display: none;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 40px;
     animation: fadeIn 0.5s ease-in-out;
 }
 
 .subcategories.active {
-    display: grid;
+    display: flex;
 }
 
 .subcategory-btn {
@@ -862,6 +867,11 @@ body {
     transition: all 0.3s ease;
     text-align: center;
     backdrop-filter: blur(10px);
+}
+
+.subcategories .subcategory-btn {
+    flex: 1;
+    min-width: 180px;
 }
 
 .subcategory-btn:hover {
