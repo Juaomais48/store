@@ -116,7 +116,7 @@
         "id": "unicore",
         "name": "Menu UniCore",
         "image": "/store/assets/images/png/uni.png",
-        "price": 16.90,
+        "price": 21.90,
         "hasTray": true,
         "durations": [
           {"text": "1 dias", "price": 21.90},
