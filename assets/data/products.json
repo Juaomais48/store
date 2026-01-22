@@ -119,9 +119,9 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 16.90},
-          {"text": "7 dias", "price": 38.90},
-          {"text": "30 dias", "price": 79.90}
+          {"text": "1 dias", "price": 21.90},
+          {"text": "7 dias", "price": 42.90},
+          {"text": "30 dias", "price": 84.90}
         ]
       },
       {
