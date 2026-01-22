@@ -119,7 +119,7 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "2 dias", "price": 16.90},
+          {"text": "1 dias", "price": 16.90},
           {"text": "7 dias", "price": 38.90},
           {"text": "30 dias", "price": 79.90}
         ]
@@ -236,7 +236,7 @@
         "price": 11.90,
         "hasTray": true,
         "durations": [
-          {"text": "2 dias", "price": 11.90},
+          {"text": "1 dias", "price": 11.90},
           {"text": "7 dias", "price": 27.90},
           {"text": "30 dias", "price": 55.90}
         ]
@@ -266,7 +266,7 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "2 dias", "price": 16.90},
+          {"text": "1 dias", "price": 16.90},
           {"text": "7 dias", "price": 38.90},
           {"text": "30 dias", "price": 79.90}
         ]
@@ -380,7 +380,7 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "2 dias", "price": 16.90},
+          {"text": "1 dias", "price": 16.90},
           {"text": "7 dias", "price": 38.90},
           {"text": "30 dias", "price": 79.90}
         ]
@@ -422,7 +422,7 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "2 dias", "price": 16.90},
+          {"text": "1 dias", "price": 16.90},
           {"text": "7 dias", "price": 28.90},
           {"text": "30 dias", "price": 55.90}
         ]
