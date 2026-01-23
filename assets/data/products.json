@@ -445,7 +445,7 @@
         "hasTray": true,
         "durations": [
           {"text": "3 dia", "price": 10.90},
-          {"text": "7 dias", "price": 18.90},
+          {"text": "7 dias", "price": 20.90},
           {"text": "30 dias", "price": 30.90}
         ]
       },
@@ -477,6 +477,36 @@
           {"text": "3 dia", "price": 15.90},
           {"text": "7 dias", "price": 24.90},
           {"text": "30 dias", "price": 50.90}
+        ]
+      }
+    ]
+  },
+  "arknights": {
+    "originium": [],
+    "passes": [],
+    "hacks": [
+      {
+        "id": "uniendfield",
+        "name": "Menu UniEndfield",
+        "image": "/store/assets/images/png/uni.png",
+        "price": 16.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dias", "price": 16.90},
+          {"text": "7 dias", "price": 38.90},
+          {"text": "30 dias", "price": 79.90}
+        ]
+      },
+      {
+        "id": "mintyendfield",
+        "name": "Menu Minty Endfield",
+        "image": "/store/assets/images/webp/minty.webp",
+        "price": 10.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dia", "price": 10.90},
+          {"text": "7 dias", "price": 20.90},
+          {"text": "30 dias", "price": 30.90}
         ]
       }
     ]

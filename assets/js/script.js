@@ -523,6 +523,9 @@ function initializeProducts() {
 
     // Inicializar produtos do Blue Protocol
     initializeCategoryProducts('bp', 'hacks', 'Hacks e Bypass');
+
+    // Inicializar produtos do Arknights Endfield
+    initializeCategoryProducts('arknights', 'hacks', 'Hacks e Bypass');
     
     // Manter conteúdo original para categorias vazias
     preserveEmptyCategories();

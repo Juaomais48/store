@@ -207,6 +207,14 @@ body {
     background-color: rgba(42, 42, 42, 0.8);
 }
 
+.category-card.arknights {
+    background-image: url('/store/assets/images/webp/arknights.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
 /* Efeito de redução de opacidade da imagem de fundo ao passar o mouse */
 .category-card:hover {
     background-color: rgba(42, 42, 42, 0.5);
