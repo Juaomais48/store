@@ -522,7 +522,7 @@ function initializeProducts() {
     initializeCategoryProducts('dna', 'hacks', 'Hacks e Bypass');
 
     // Inicializar produtos do Blue Protocol
-    initializeCategoryProducts('bp', 'hacks', 'Hacks e Bypass');
+    //initializeCategoryProducts('bp', 'hacks', 'Hacks e Bypass');
 
     // Inicializar produtos do Arknights Endfield
     initializeCategoryProducts('arknights', 'hacks', 'Hacks e Bypass');
