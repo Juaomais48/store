@@ -128,10 +128,10 @@
         "id": "antiaddict",
         "name": "Menu Antiaddict",
         "image": "/store/assets/images/png/antiaddict.png",
-        "price": 12.90,
+        "price": 15.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dia", "price": 12.90},
+          {"text": "1 dia", "price": 15.90},
           {"text": "3 dias", "price": 21.90},
           {"text": "7 dias", "price": 36.90},
           {"text": "30 dias", "price": 92.90}
@@ -245,12 +245,12 @@
         "id": "mintysr",
         "name": "Menu Minty SR",
         "image": "/store/assets/images/webp/minty.webp",
-        "price": 5.90,
+        "price": 8.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dia", "price": 5.90},
-          {"text": "7 dias", "price": 12.90},
-          {"text": "30 dias", "price": 24.90}
+          {"text": "1 dia", "price": 8.90},
+          {"text": "7 dias", "price": 16.90},
+          {"text": "30 dias", "price": 26.90}
         ]
       }
     ]
@@ -505,8 +505,8 @@
         "hasTray": true,
         "durations": [
           {"text": "3 dia", "price": 10.90},
-          {"text": "7 dias", "price": 20.90},
-          {"text": "30 dias", "price": 30.90}
+          {"text": "7 dias", "price": 23.90},
+          {"text": "30 dias", "price": 38.90}
         ]
       }
     ]
