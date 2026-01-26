@@ -108,8 +108,10 @@
         "price": 30.00,
         "hasTray": true,
         "durations": [
-          {"text": "Shika Beta - Vitalício", "price": 30.00},
-          {"text": "Shika Alpha - Vitalício", "price": 350.00}
+          {"text": "Shika Beta - Vitalício", "price": 64.90},
+          {"text": "Shika Alpha - 7 dias", "price": 46.90},
+          {"text": "Shika Alpha - 30 dias", "price": 100.90},
+          {"text": "Shika Alpha - Vitalício", "price": 400.90}
         ]
       },
       {
