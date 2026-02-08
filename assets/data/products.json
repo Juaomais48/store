@@ -510,6 +510,18 @@
           {"text": "7 dias", "price": 23.90},
           {"text": "30 dias", "price": 38.90}
         ]
+      },
+      {
+        "id": "slasharknights",
+        "name": "Menu Slash",
+        "image": "/store/assets/images/png/slash.png",
+        "price": 21.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 21.90},
+          {"text": "7 dias", "price": 32.90},
+          {"text": "30 dias", "price": 53.90}
+        ]
       }
     ]
   }
