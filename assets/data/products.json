@@ -386,18 +386,6 @@
           {"text": "7 dias", "price": 12.90},
           {"text": "30 dias", "price": 24.90}
         ]
-      },
-      {
-        "id": "slashzzz",
-        "name": "Slash Bypass",
-        "image": "/store/assets/images/png/slash.png",
-        "price": 21.90,
-        "hasTray": true,
-        "durations": [
-          {"text": "3 dias", "price": 21.90},
-          {"text": "7 dias", "price": 32.90},
-          {"text": "30 dias", "price": 53.90}
-        ]
       }
     ]
   },
