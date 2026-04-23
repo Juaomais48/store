@@ -135,31 +135,7 @@ body {
     /* Os fade laterais */
 }
 
-/* Fade esquerdo */
-.game-tabs-wrapper::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 60px;
-    background: linear-gradient(to right, rgba(17,17,24,1), transparent);
-    pointer-events: none;
-    z-index: 10;
-}
 
-/* Fade direito */
-.game-tabs-wrapper::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 60px;
-    background: linear-gradient(to left, rgba(17,17,24,1), transparent);
-    pointer-events: none;
-    z-index: 10;
-}
 
 /*
  * CORREÇÃO DEFINITIVA DO GLOW CORTADO:

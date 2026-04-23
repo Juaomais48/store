@@ -407,18 +407,14 @@ function formatarMoeda(valor) {
     const scroller = document.getElementById('gameTabsScroll');
     if (!scroller) return;
 
-    const BASE_SPEED   = 0.4;  // px/frame velocidade base
-    const EDGE_ZONE    = 120;  // px das bordas onde começa a acelerar
-    const MAX_BOOST    = 6;    // multiplicador máximo nas extremidades
+    const BASE_SPEED   = 0.4;
 
-    let autoSpeed    = BASE_SPEED;  // velocidade atual do auto-scroll
-    let direction    = 1;           // 1 = direita, -1 = esquerda
-    let isPaused     = false;       // pausa no hover sobre um card
+    let direction    = 1;
+    let isPaused     = false;
     let isDragging   = false;
     let dragStartX   = 0;
     let dragScrollX  = 0;
     let rafId        = null;
-    let mouseEdgeBoost = 1;         // multiplicador por proximidade da borda
 
     function getMaxScroll() {
         return scroller.scrollWidth - scroller.clientWidth;
@@ -426,55 +422,16 @@ function formatarMoeda(valor) {
 
     function tick() {
         if (!isDragging && !isPaused) {
-            scroller.scrollLeft += autoSpeed * direction * mouseEdgeBoost;
-
+            scroller.scrollLeft += BASE_SPEED * direction;
             const max = getMaxScroll();
-            // Ciclo infinito: ao chegar nas extremidades, inverte
-            if (scroller.scrollLeft >= max - 1) {
-                direction = -1;
-            } else if (scroller.scrollLeft <= 1) {
-                direction = 1;
-            }
+            if (scroller.scrollLeft >= max - 1) direction = -1;
+            else if (scroller.scrollLeft <= 1)  direction =  1;
         }
         rafId = requestAnimationFrame(tick);
     }
 
-    // Detecta posição do mouse para acelerar nas bordas
-    scroller.addEventListener('mousemove', (e) => {
-        const rect  = scroller.getBoundingClientRect();
-        const x     = e.clientX - rect.left;
-        const w     = rect.width;
-
-        // Borda esquerda
-        if (x < EDGE_ZONE) {
-            const frac = 1 - (x / EDGE_ZONE);           // 0→1 conforme se aproxima
-            mouseEdgeBoost = 1 + frac * (MAX_BOOST - 1);
-            direction = -1;
-        }
-        // Borda direita
-        else if (x > w - EDGE_ZONE) {
-            const frac = 1 - ((w - x) / EDGE_ZONE);
-            mouseEdgeBoost = 1 + frac * (MAX_BOOST - 1);
-            direction = 1;
-        }
-        // Centro — velocidade base, sem forçar direção
-        else {
-            mouseEdgeBoost = 1;
-        }
-    });
-
-    scroller.addEventListener('mouseleave', () => {
-        mouseEdgeBoost = 1;
-        isPaused = false;
-    });
-
-    // Pausa quando o cursor está sobre um card (zona central)
-    scroller.addEventListener('mousemove', (e) => {
-        const rect = scroller.getBoundingClientRect();
-        const x    = e.clientX - rect.left;
-        const w    = rect.width;
-        isPaused = (x >= EDGE_ZONE && x <= w - EDGE_ZONE);
-    });
+    scroller.addEventListener('mouseenter', () => { isPaused = true; });
+    scroller.addEventListener('mouseleave', () => { isPaused = false; });
 
     // Drag com mouse
     scroller.addEventListener('mousedown', (e) => {
