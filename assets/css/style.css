@@ -127,46 +127,68 @@ body {
 }
 
 /* ============================================
-   GAME TABS (horizontal scrollable navbar)
+   GAME TABS — CAROUSEL
    ============================================ */
 .game-tabs-wrapper {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     position: relative;
-    /* padding garante que box-shadow dos cards não seja clipado pelo overflow do scroll */
-    padding: 8px 4px 12px;
+    /* Os fade laterais */
 }
 
+/* Fade esquerdo */
+.game-tabs-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    background: linear-gradient(to right, rgba(17,17,24,1), transparent);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Fade direito */
 .game-tabs-wrapper::after {
     content: '';
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
-    width: 50px;
-    background: linear-gradient(to right, transparent, rgba(17,17,24,0.95));
+    width: 60px;
+    background: linear-gradient(to left, rgba(17,17,24,1), transparent);
     pointer-events: none;
+    z-index: 10;
 }
+
+/*
+ * CORREÇÃO DEFINITIVA DO GLOW CORTADO:
+ * overflow num flex container clipa box-shadow mesmo com overflow-y:visible.
+ * Solução: padding interno generoso + margin negativa no wrapper absorve o glow
+ * antes do clip boundary.
+ */
+.game-tabs-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    /* Margem negativa + padding: o box-shadow "respira" dentro do padding
+       antes de chegar na borda de clip */
+    margin: -14px -4px;
+    padding: 14px 4px;
+    cursor: grab;
+    user-select: none;
+}
+.game-tabs-scroll:active { cursor: grabbing; }
+.game-tabs-scroll::-webkit-scrollbar { display: none; }
 
 .game-tabs {
     display: flex;
     gap: 10px;
-    /* overflow-x sem clip — usa scroll mas não corta sombras verticais */
-    overflow-x: auto;
-    overflow-y: visible;
-    scrollbar-width: none;
-    background: transparent;
-    border: none;
-    /* padding interno para o glow não ser clipado nas bordas */
-    padding: 4px 4px 4px;
+    /* padding lateral garante que o glow do primeiro e último card não sejam clipados */
+    padding: 0 60px;
+    width: max-content;
 }
 
-.game-tabs::-webkit-scrollbar { display: none; }
-
-/*
- * CORREÇÃO DO GLOW CORTADO:
- * .game-tab NÃO tem overflow:hidden — isso é o que cortava o box-shadow.
- * O clipping da imagem de fundo fica em .tab-inner, um wrapper interno.
- */
 .game-tab {
     position: relative;
     flex: 0 0 180px;
@@ -177,15 +199,15 @@ body {
     border-radius: 14px;
     background: rgba(0,0,0,0.4);
     cursor: pointer;
-    /* SEM overflow:hidden aqui — deixa o box-shadow extravazar */
+    /* SEM overflow:hidden — o clip da imagem fica no .tab-inner */
     transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* Wrapper interno que faz o clipping da imagem respeitando border-radius */
+/* Wrapper interno: clipa só a imagem, preserva o glow externo */
 .tab-inner {
     position: absolute;
     inset: 0;
-    border-radius: 13px; /* 1px a menos que o pai para não vazar na borda */
+    border-radius: 13px;
     overflow: hidden;
     pointer-events: none;
 }
@@ -195,7 +217,7 @@ body {
     inset: 0;
     background-size: cover;
     background-position: center center;
-    opacity: 0.3;
+    opacity: 0.32;
     transition: opacity 0.4s ease;
 }
 
@@ -216,30 +238,30 @@ body {
     right: 0;
     z-index: 2;
     display: block;
-    padding: 22px 10px 10px;
+    padding: 24px 10px 10px;
     font-family: 'Syne', sans-serif;
     font-size: 0.78rem;
     font-weight: 700;
     color: #9ca3af;
-    text-shadow: 0 1px 6px rgba(0,0,0,1), 0 0 12px rgba(0,0,0,0.8);
+    text-shadow: 0 1px 6px rgba(0,0,0,1), 0 0 14px rgba(0,0,0,0.9);
     white-space: normal;
     text-align: center;
     letter-spacing: 0.02em;
     line-height: 1.2;
     transition: color 0.2s;
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 100%);
     border-radius: 0 0 13px 13px;
     pointer-events: none;
 }
 
-.game-tab:hover .tab-bg    { opacity: 0.65; }
+.game-tab:hover .tab-bg    { opacity: 0.68; }
 .game-tab:hover .tab-label { color: #ddd6fe; }
 .game-tab:hover {
     border-color: rgba(139,92,246,0.65);
     box-shadow:
-        0 0 0 1px rgba(139,92,246,0.18),
-        0 0 18px rgba(139,92,246,0.22),
-        0 4px 20px rgba(139,92,246,0.15);
+        0 0 0 1px rgba(139,92,246,0.2),
+        0 0 20px rgba(139,92,246,0.25),
+        0 4px 22px rgba(139,92,246,0.15);
 }
 
 .game-tab.active .tab-bg   { opacity: 0.82; }
@@ -249,8 +271,8 @@ body {
     background: rgba(139,92,246,0.08);
     box-shadow:
         0 0 0 1px rgba(167,139,250,0.3),
-        0 0 24px rgba(139,92,246,0.35),
-        0 4px 32px rgba(109,40,217,0.22);
+        0 0 26px rgba(139,92,246,0.38),
+        0 4px 34px rgba(109,40,217,0.22);
 }
 
 /* ============================================
@@ -1222,6 +1244,7 @@ body {
 
     .game-tab { flex: 0 0 130px; width: 130px; height: 90px; }
     .tab-label { font-size: 0.72rem; padding: 6px 8px 8px; }
+    .game-tabs { padding: 0 30px; }
     .product-grid.grid-currency { grid-template-columns: 1fr; }
 
     .products-area { padding: 20px 14px 24px; }
