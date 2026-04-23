@@ -160,8 +160,6 @@ body {
 .game-tabs {
     display: flex;
     gap: 10px;
-    /* padding lateral garante que o glow do primeiro e último card não sejam clipados */
-    padding: 0 60px;
     width: max-content;
 }
 
