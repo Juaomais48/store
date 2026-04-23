@@ -6,291 +6,213 @@
     <title>Início | Juão Store</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/ico/store.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <div class="logo-icon"></div>
-                <div class="logo-text">Juão Store</div>
-            </div>
-            
-            <nav class="nav-links">
-                <a href="#" onclick="openPopup()">Contato</a>
-                <a href="page/functions.html">Diferenças</a>
-                <a href="page/faq.html">FAQ</a>
-                <a href="page/terms.html">Termos</a>
-            </nav>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="header-content">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <div class="logo-text">Juão Store</div>
         </div>
-    </header>
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="contact-container">
-            <button class="close-btn" onclick="closePopup()">&times;</button>
-            <div class="profile-section">
-                <div class="profile-image"></div>
-                <div class="profile-info">
-                    <h2>Juãomais48</h2>
-                    <p>𝐇𝐨𝐰 𝐛𝐚𝐝 𝐝𝐨 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐦𝐞?</p>
-                    <div class="status-badge">
-                        <div class="status-dot"></div>
-                        Online
-                    </div>
-                    <div class="verify-badge">
-                        <div class="verify-dot"></div>
-                        Verificado
-                    </div>
-                </div>
+        <nav class="nav-links">
+            <a href="#" onclick="openPopup()">Contato</a>
+            <a href="page/functions.html">Diferenças</a>
+            <a href="page/faq.html">FAQ</a>
+            <a href="page/terms.html">Termos</a>
+        </nav>
+    </div>
+</header>
+
+<!-- POPUP CONTATO -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="contact-container">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <div class="profile-section">
+            <div class="profile-image"></div>
+            <div class="profile-info">
+                <h2>Juãomais48</h2>
+                <p>𝐇𝐨𝐰 𝐛𝐚𝐝 𝐝𝐨 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐦𝐞?</p>
+                <div class="status-badge"><div class="status-dot"></div>Online</div>
+                <div class="verify-badge"><div class="verify-dot"></div>Verificado</div>
             </div>
-
-            <a href="https://discordapp.com/channels/@me/593596831280267267/" target="_blank" class="discord-button">
-                <svg class="discord-icon" viewBox="0 0 24 24">
-                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-                </svg>
-                Iniciar Chat no Discord
-            </a>
-
-            <div class="contact-info">
-                <p>Entre em contato para:</p>
-                
-                <div class="features">
-                    <div class="feature">
-                        <strong>Suporte</strong>
-                        Ajuda técnica rápida
-                    </div>
-                    <div class="feature">
-                        <strong>Vendas</strong>
-                        Dúvidas sobre produtos
-                    </div>
-                </div>
+        </div>
+        <a href="https://discordapp.com/channels/@me/593596831280267267/" target="_blank" class="discord-button">
+            <svg class="discord-icon" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            Iniciar Chat no Discord
+        </a>
+        <div class="contact-info">
+            <p>Entre em contato para:</p>
+            <div class="features">
+                <div class="feature"><strong>Suporte</strong>Ajuda técnica rápida</div>
+                <div class="feature"><strong>Vendas</strong>Dúvidas sobre produtos</div>
             </div>
         </div>
     </div>
-    <div class="popup-overlay" id="checkoutPopup">
-        <div class="checkout-container">
-            <button class="close-btn" onclick="closeCheckout()">&times;</button>
-            <h2>Finalizar Compra</h2>
-            
-            <div class="checkout-product">
-                <img id="checkoutImage" src="" alt="Produto">
-                <div class="checkout-info">
-                    <div class="checkout-name" id="checkoutName"></div>
-                    <div class="checkout-duration" id="checkoutDuration"></div>
-                    <div class="checkout-price" id="checkoutPrice"></div>
-                </div>
-            </div>
+</div>
 
-            <div class="checkout-instructions">
-                <p>Para finalizar sua compra, entre em contato comigo <strong style="color: #7580ff; font-weight: 700;">@Juaomais48</strong> na DM do Discord informando:</p>
-                <ul>
-                    <li>O produto que deseja comprar</li>
-                    <li>A duração selecionada</li>
-                    <li>Qual forma de pagamento</li>
-                </ul>
+<!-- POPUP CHECKOUT -->
+<div class="popup-overlay" id="checkoutPopup">
+    <div class="checkout-container">
+        <button class="close-btn" onclick="closeCheckout()">&times;</button>
+        <h2>Finalizar Compra</h2>
+        <div class="checkout-product">
+            <img id="checkoutImage" src="" alt="Produto">
+            <div class="checkout-info">
+                <div class="checkout-name" id="checkoutName"></div>
+                <div class="checkout-duration" id="checkoutDuration"></div>
+                <div class="checkout-price" id="checkoutPrice"></div>
             </div>
+        </div>
+        <div class="checkout-instructions">
+            <p>Para finalizar, entre em contato comigo <strong style="color:#7580ff;font-weight:700;">@Juaomais48</strong> no Discord informando:</p>
+            <ul>
+                <li>O produto que deseja comprar</li>
+                <li>A duração selecionada</li>
+                <li>Qual forma de pagamento</li>
+            </ul>
+        </div>
+        <a href="https://discordapp.com/channels/@me/593596831280267267/" target="_blank" class="checkout-discord-btn">
+            <svg class="discord-icon" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            Comprar via Discord
+        </a>
+    </div>
+</div>
 
-            <a href="https://discordapp.com/channels/@me/593596831280267267/" target="_blank" class="checkout-discord-btn">
-                <svg class="discord-icon" viewBox="0 0 24 24">
-                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-                </svg>
-                Comprar via Discord
-            </a>
+<!-- MAIN -->
+<div class="container">
+
+    <!-- HERO -->
+    <div class="page-header">
+        <h1>Lojinha do Juão</h1>
+        <p>Gemas, Jades, Passes e os melhores Cheats para sua gameplay</p>
+    </div>
+
+    <!-- GAME TABS (navbar horizontal) -->
+    <div class="game-tabs-wrapper">
+        <div class="game-tabs" id="gameTabs">
+            <button class="game-tab active" data-game="genshin" onclick="selectGame('genshin', this)">
+                <span class="tab-bg genshin-bg"></span>
+                <span class="tab-label">Genshin Impact</span>
+            </button>
+            <button class="game-tab" data-game="starrail" onclick="selectGame('starrail', this)">
+                <span class="tab-bg starrail-bg"></span>
+                <span class="tab-label">Star Rail</span>
+            </button>
+            <button class="game-tab" data-game="wuwa" onclick="selectGame('wuwa', this)">
+                <span class="tab-bg wuwa-bg"></span>
+                <span class="tab-label">Wuthering Waves</span>
+            </button>
+            <button class="game-tab" data-game="zzz" onclick="selectGame('zzz', this)">
+                <span class="tab-bg zzz-bg"></span>
+                <span class="tab-label">Zenless Zone Zero</span>
+            </button>
+            <button class="game-tab" data-game="dna" onclick="selectGame('dna', this)">
+                <span class="tab-bg dna-bg"></span>
+                <span class="tab-label">Duel Night Abyss</span>
+            </button>
+            <button class="game-tab" data-game="arknights" onclick="selectGame('arknights', this)">
+                <span class="tab-bg arknights-bg"></span>
+                <span class="tab-label">Arknights: Endfield</span>
+            </button>
         </div>
     </div>
-    <div class="container">
-        <div class="page-header">
-            <h1>Boas vindas à Lojinha do Juão</h1>
-            <p>Aqui você vai encontrar Gemas, Jades, Passes e Bênçãos e os mais completos Cheats, com funções que vão fazer sua gameplay ficar mais fácil e dinâmica.</p>
-        </div>        
 
-        <div class="categories">
-            <div class="category-card genshin" onclick="showProductsC('genshin')">
-                <h3>Genshin Impact</h3>
-                <p>Explore Teyvat com estilo</p>
+    <!-- PRODUCTS AREA -->
+    <div class="products-area" id="productsArea">
+
+        <!-- GENSHIN -->
+        <div class="game-panel active" id="panel-genshin">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'genshin-cristais')">💎 Cristais</button>
+                <button class="type-tab" onclick="selectType(this, 'genshin-passes')">🌙 Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'genshin-hacks')">⚡ Hacks</button>
             </div>
-            <div class="category-card starrail" onclick="showProductsC('starrail')">
-                <h3>Honkai: Star Rail</h3>
-                <p>Jornada pelas estrelas</p>
-            </div>
-            <div class="category-card wuwa" onclick="showProductsC('wuwa')">
-                <h3>Wuthering Waves</h3>
-                <p>Ondas de aventura</p>
-            </div>
-            <div class="category-card zzz" onclick="showProductsC('zzz')" id="home-target">
-                <h3>Zenless Zone Zero</h3>
-                <p>Estilo urbano futurista</p>
-            </div>
-            <div class="category-card dna" onclick="showProductsC('dna')">
-                <h3>Duel Night Abyss</h3>
-                <p>Além dos limites</p>
-            </div>
-            <!--div class="category-card bp" onclick="showProductsC('bp')">
-                <h3>Blue Protocol: Resonance</h3>
-                <p>Um mundo de fantasia</p>
-            </div-->
-            <div class="category-card arknights" onclick="showProductsC('arknights')">
-                <h3>Arknights: Endfield</h3>
-                <p>Beleza de tirar o fôlego</p>
-            </div>
+            <div class="type-panel active" id="genshin-cristais"></div>
+            <div class="type-panel" id="genshin-passes"></div>
+            <div class="type-panel" id="genshin-hacks"></div>
         </div>
 
-        <!-- Genshin Impact Products -->
-        <div id="genshin" class="products-section">
-            <div class="product-lists">
-                <div class="product-list">
-                    <h4>Cristais Gênesis</h4>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Passes e Bênçãos</h4>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Hacks e Bypass</h4>
-                </div>
+        <!-- STAR RAIL -->
+        <div class="game-panel" id="panel-starrail">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'starrail-fragmentos')">💎 Fragmentos</button>
+                <button class="type-tab" onclick="selectType(this, 'starrail-passes')">🚂 Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'starrail-hacks')">⚡ Hacks</button>
             </div>
+            <div class="type-panel active" id="starrail-fragmentos"></div>
+            <div class="type-panel" id="starrail-passes"></div>
+            <div class="type-panel" id="starrail-hacks"></div>
         </div>
 
-        <!-- Star Rail Products -->
-        <div id="starrail" class="products-section">
-            <div class="product-lists">
-                <div class="product-list">
-                    <h4>Fragmentos Oníricos</h4>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Passes e Suprimentos</h4>
-                </div>
-
-                <div class="product-list">
-                    <h4>Hacks e Bypass</h4>
-                </div>
+        <!-- WUWA -->
+        <div class="game-panel" id="panel-wuwa">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'wuwa-lunites')">💎 Lunites</button>
+                <button class="type-tab" onclick="selectType(this, 'wuwa-passes')">🌊 Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'wuwa-hacks')">⚡ Hacks</button>
             </div>
+            <div class="type-panel active" id="wuwa-lunites"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="wuwa-passes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="wuwa-hacks"></div>
         </div>
 
-        <!-- Wuthering Waves Products -->
-        <div id="wuwa" class="products-section">
-            <div class="product-lists">
-                <div class="product-list">
-                    <h4>Lunites</h4>
-                    <div class="product-none">
-                        <p>Em Breve.</p>
-                    </div>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Passes e Assinaturas</h4>
-                    <div class="product-none">
-                        <p>Em Breve.</p>
-                    </div>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Hacks e Bypass</h4>
-                </div>
+        <!-- ZZZ -->
+        <div class="game-panel" id="panel-zzz">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'zzz-monocromos')">💎 Monocromos</button>
+                <button class="type-tab" onclick="selectType(this, 'zzz-passes')">🏙️ Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'zzz-hacks')">⚡ Hacks</button>
             </div>
+            <div class="type-panel active" id="zzz-monocromos"></div>
+            <div class="type-panel" id="zzz-passes"></div>
+            <div class="type-panel" id="zzz-hacks"></div>
         </div>
 
-        <!-- Zenless Zone Zero Products -->
-        <div id="zzz" class="products-section">
-            <div class="product-lists">
-                <div class="product-list">
-                    <h4>Monocromos</h4>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Passes e Assinaturas</h4>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Hacks e Bypass</h4>
-                </div>
+        <!-- DNA -->
+        <div class="game-panel" id="panel-dna">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'dna-plumulas')">💎 Plumulas</button>
+                <button class="type-tab" onclick="selectType(this, 'dna-passes')">🌑 Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'dna-hacks')">⚡ Hacks</button>
             </div>
+            <div class="type-panel active" id="dna-plumulas"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="dna-passes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="dna-hacks"></div>
         </div>
 
-        <!-- Duel Night Abyss Products -->
-        <div id="dna" class="products-section">
-            <div class="product-lists">
-                <div class="product-list">
-                    <h4>Plumulas</h4>
-                    <div class="product-none">
-                        <p>Em Breve.</p>
-                    </div>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Passes e Assinaturas</h4>
-                    <div class="product-none">
-                        <p>Em Breve.</p>
-                    </div>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Hacks e Bypass</h4>
-                </div>
+        <!-- ARKNIGHTS -->
+        <div class="game-panel" id="panel-arknights">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'arknights-originium')">💎 Originium</button>
+                <button class="type-tab" onclick="selectType(this, 'arknights-passes')">📦 Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'arknights-hacks')">⚡ Hacks</button>
             </div>
+            <div class="type-panel active" id="arknights-originium"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="arknights-passes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="arknights-hacks"></div>
         </div>
 
-        <!-- Blue Protocol Products -->
-        <!--div id="bp" class="products-section">
-            <div class="product-lists">
-                <div class="product-list">
-                    <h4>Orbes Rosa</h4>
-                    <div class="product-none">
-                        <p>Em Breve.</p>
-                    </div>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Passes e Assinaturas</h4>
-                    <div class="product-none">
-                        <p>Em Breve.</p>
-                    </div>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Hacks e Bypass</h4>
-                </div>
-            </div>
-        </div-->
+    </div><!-- /products-area -->
 
-        <!-- Arknights Endfield Products -->
-        <div id="arknights" class="products-section">
-            <div class="product-lists">
-                <div class="product-list">
-                    <h4>Originium</h4>
-                    <div class="product-none">
-                        <p>Em Breve.</p>
-                    </div>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Passes e Assinaturas</h4>
-                    <div class="product-none">
-                        <p>Em Breve.</p>
-                    </div>
-                </div>
-                
-                <div class="product-list">
-                    <h4>Hacks e Bypass</h4>
-                </div>
-            </div>
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#" onclick="openPopup()">Contato</a>
+            <a href="page/functions.html">Diferenças</a>
+            <a href="page/faq.html">FAQ</a>
+            <a href="page/terms.html">Termos</a>
         </div>
+        <div class="copyright">&copy; 2025 Juão Store. Todos os direitos reservados.</div>
     </div>
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#" onclick="openPopup()">Contato</a>
-                <a href="page/functions.html">Diferenças</a>
-                <a href="page/faq.html">FAQ</a>
-                <a href="page/terms.html">Termos</a>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2025 Juão Store. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
-     
-    <script src="assets/js/script.js"></script>    
+</footer>
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>
