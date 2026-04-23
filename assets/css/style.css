@@ -132,6 +132,8 @@ body {
 .game-tabs-wrapper {
     margin-bottom: 16px;
     position: relative;
+    /* padding garante que box-shadow dos cards não seja clipado pelo overflow do scroll */
+    padding: 8px 4px 12px;
 }
 
 .game-tabs-wrapper::after {
@@ -140,25 +142,31 @@ body {
     right: 0;
     top: 0;
     height: 100%;
-    width: 40px;
-    background: linear-gradient(to right, transparent, rgba(17,17,24,0.9));
+    width: 50px;
+    background: linear-gradient(to right, transparent, rgba(17,17,24,0.95));
     pointer-events: none;
-    border-radius: 0 14px 0 0;
 }
 
 .game-tabs {
     display: flex;
     gap: 10px;
+    /* overflow-x sem clip — usa scroll mas não corta sombras verticais */
     overflow-x: auto;
+    overflow-y: visible;
     scrollbar-width: none;
-    border-radius: 0;
     background: transparent;
     border: none;
-    padding: 6px 4px 10px;
+    /* padding interno para o glow não ser clipado nas bordas */
+    padding: 4px 4px 4px;
 }
 
 .game-tabs::-webkit-scrollbar { display: none; }
 
+/*
+ * CORREÇÃO DO GLOW CORTADO:
+ * .game-tab NÃO tem overflow:hidden — isso é o que cortava o box-shadow.
+ * O clipping da imagem de fundo fica em .tab-inner, um wrapper interno.
+ */
 .game-tab {
     position: relative;
     flex: 0 0 180px;
@@ -169,8 +177,17 @@ body {
     border-radius: 14px;
     background: rgba(0,0,0,0.4);
     cursor: pointer;
+    /* SEM overflow:hidden aqui — deixa o box-shadow extravazar */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Wrapper interno que faz o clipping da imagem respeitando border-radius */
+.tab-inner {
+    position: absolute;
+    inset: 0;
+    border-radius: 13px; /* 1px a menos que o pai para não vazar na borda */
     overflow: hidden;
-    transition: all 0.3s ease;
+    pointer-events: none;
 }
 
 .tab-bg {
@@ -180,55 +197,60 @@ body {
     background-position: center center;
     opacity: 0.3;
     transition: opacity 0.4s ease;
-    border-radius: 14px;
 }
 
-.tab-bg.genshin-bg   { background-image: url('/store/assets/images/webp/genshin.webp'); }
-.tab-bg.starrail-bg  { background-image: url('/store/assets/images/webp/hsr.webp'); }
-.tab-bg.wuwa-bg      { background-image: url('/store/assets/images/webp/wuwa.webp'); }
-.tab-bg.zzz-bg       { background-image: url('/store/assets/images/webp/zzz.webp'); }
-.tab-bg.dna-bg       { background-image: url('/store/assets/images/webp/dna.webp'); }
-.tab-bg.arknights-bg { background-image: url('/store/assets/images/webp/arknights.webp'); }
+.tab-bg.genshin-bg     { background-image: url('/store/assets/images/webp/genshin.webp'); }
+.tab-bg.starrail-bg    { background-image: url('/store/assets/images/webp/hsr.webp'); }
+.tab-bg.wuwa-bg        { background-image: url('/store/assets/images/webp/wuwa.webp'); }
+.tab-bg.zzz-bg         { background-image: url('/store/assets/images/webp/zzz.webp'); }
+.tab-bg.dna-bg         { background-image: url('/store/assets/images/webp/dna.webp'); }
+.tab-bg.arknights-bg   { background-image: url('/store/assets/images/webp/arknights.webp'); }
+.tab-bg.stellasora-bg  { background-image: url('/store/assets/images/webp/stellasora.webp'); }
+.tab-bg.bluearchive-bg { background-image: url('/store/assets/images/webp/bluearchive.webp'); }
+.tab-bg.sds-bg         { background-image: url('/store/assets/images/webp/sds.webp'); }
 
 .tab-label {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     display: block;
-    padding: 8px 10px 10px;
+    padding: 22px 10px 10px;
     font-family: 'Syne', sans-serif;
     font-size: 0.78rem;
     font-weight: 700;
     color: #9ca3af;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.9);
+    text-shadow: 0 1px 6px rgba(0,0,0,1), 0 0 12px rgba(0,0,0,0.8);
     white-space: normal;
     text-align: center;
     letter-spacing: 0.02em;
     line-height: 1.2;
     transition: color 0.2s;
-    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    border-radius: 0 0 13px 13px;
+    pointer-events: none;
 }
 
-.game-tab:hover .tab-bg    { opacity: 0.6; }
+.game-tab:hover .tab-bg    { opacity: 0.65; }
 .game-tab:hover .tab-label { color: #ddd6fe; }
 .game-tab:hover {
-    border-color: rgba(139,92,246,0.6);
+    border-color: rgba(139,92,246,0.65);
     box-shadow:
-        0 0 0 1px rgba(139,92,246,0.2),
-        0 4px 16px rgba(139,92,246,0.18);
+        0 0 0 1px rgba(139,92,246,0.18),
+        0 0 18px rgba(139,92,246,0.22),
+        0 4px 20px rgba(139,92,246,0.15);
 }
 
-.game-tab.active .tab-bg   { opacity: 0.78; }
+.game-tab.active .tab-bg   { opacity: 0.82; }
 .game-tab.active .tab-label { color: #fff; }
 .game-tab.active {
-    border-color: rgba(167,139,250,0.85);
-    background: rgba(139,92,246,0.1);
+    border-color: rgba(167,139,250,0.9);
+    background: rgba(139,92,246,0.08);
     box-shadow:
-        0 0 0 1px rgba(167,139,250,0.25),
-        0 2px 20px rgba(139,92,246,0.28),
-        0 8px 32px rgba(109,40,217,0.18);
+        0 0 0 1px rgba(167,139,250,0.3),
+        0 0 24px rgba(139,92,246,0.35),
+        0 4px 32px rgba(109,40,217,0.22);
 }
 
 /* ============================================

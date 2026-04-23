@@ -95,28 +95,40 @@
     <div class="game-tabs-wrapper">
         <div class="game-tabs" id="gameTabs">
             <button class="game-tab active" data-game="genshin" onclick="selectGame('genshin', this)">
-                <span class="tab-bg genshin-bg"></span>
+                <span class="tab-inner"><span class="tab-bg genshin-bg"></span></span>
                 <span class="tab-label">Genshin Impact</span>
             </button>
             <button class="game-tab" data-game="starrail" onclick="selectGame('starrail', this)">
-                <span class="tab-bg starrail-bg"></span>
+                <span class="tab-inner"><span class="tab-bg starrail-bg"></span></span>
                 <span class="tab-label">Star Rail</span>
             </button>
             <button class="game-tab" data-game="wuwa" onclick="selectGame('wuwa', this)">
-                <span class="tab-bg wuwa-bg"></span>
+                <span class="tab-inner"><span class="tab-bg wuwa-bg"></span></span>
                 <span class="tab-label">Wuthering Waves</span>
             </button>
             <button class="game-tab" data-game="zzz" onclick="selectGame('zzz', this)">
-                <span class="tab-bg zzz-bg"></span>
+                <span class="tab-inner"><span class="tab-bg zzz-bg"></span></span>
                 <span class="tab-label">Zenless Zone Zero</span>
             </button>
             <button class="game-tab" data-game="dna" onclick="selectGame('dna', this)">
-                <span class="tab-bg dna-bg"></span>
+                <span class="tab-inner"><span class="tab-bg dna-bg"></span></span>
                 <span class="tab-label">Duel Night Abyss</span>
             </button>
             <button class="game-tab" data-game="arknights" onclick="selectGame('arknights', this)">
-                <span class="tab-bg arknights-bg"></span>
+                <span class="tab-inner"><span class="tab-bg arknights-bg"></span></span>
                 <span class="tab-label">Arknights: Endfield</span>
+            </button>
+            <button class="game-tab" data-game="stellasora" onclick="selectGame('stellasora', this)">
+                <span class="tab-inner"><span class="tab-bg stellasora-bg"></span></span>
+                <span class="tab-label">Stella Sora</span>
+            </button>
+            <button class="game-tab" data-game="bluearchive" onclick="selectGame('bluearchive', this)">
+                <span class="tab-inner"><span class="tab-bg bluearchive-bg"></span></span>
+                <span class="tab-label">Blue Archive</span>
+            </button>
+            <button class="game-tab" data-game="sds" onclick="selectGame('sds', this)">
+                <span class="tab-inner"><span class="tab-bg sds-bg"></span></span>
+                <span class="tab-label">Seven Deadly Sins</span>
             </button>
         </div>
     </div>
@@ -194,6 +206,42 @@
             <div class="type-panel active" id="arknights-originium"><div class="product-none"><p>Em Breve.</p></div></div>
             <div class="type-panel" id="arknights-passes"><div class="product-none"><p>Em Breve.</p></div></div>
             <div class="type-panel" id="arknights-hacks"></div>
+        </div>
+
+        <!-- STELLA SORA -->
+        <div class="game-panel" id="panel-stellasora">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'stellasora-orbes')">💎 Orbes</button>
+                <button class="type-tab" onclick="selectType(this, 'stellasora-passes')">⭐ Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'stellasora-hacks')">⚡ Hacks</button>
+            </div>
+            <div class="type-panel active" id="stellasora-orbes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="stellasora-passes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="stellasora-hacks"><div class="product-none"><p>Em Breve.</p></div></div>
+        </div>
+
+        <!-- BLUE ARCHIVE -->
+        <div class="game-panel" id="panel-bluearchive">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'bluearchive-pyroxenes')">💎 Pyroxenes</button>
+                <button class="type-tab" onclick="selectType(this, 'bluearchive-passes')">🎓 Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'bluearchive-hacks')">⚡ Hacks</button>
+            </div>
+            <div class="type-panel active" id="bluearchive-pyroxenes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="bluearchive-passes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="bluearchive-hacks"><div class="product-none"><p>Em Breve.</p></div></div>
+        </div>
+
+        <!-- SEVEN DEADLY SINS -->
+        <div class="game-panel" id="panel-sds">
+            <div class="type-tabs">
+                <button class="type-tab active" onclick="selectType(this, 'sds-diamantes')">💎 Diamantes</button>
+                <button class="type-tab" onclick="selectType(this, 'sds-passes')">⚔️ Passes</button>
+                <button class="type-tab" onclick="selectType(this, 'sds-hacks')">⚡ Hacks</button>
+            </div>
+            <div class="type-panel active" id="sds-diamantes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="sds-passes"><div class="product-none"><p>Em Breve.</p></div></div>
+            <div class="type-panel" id="sds-hacks"><div class="product-none"><p>Em Breve.</p></div></div>
         </div>
 
     </div><!-- /products-area -->

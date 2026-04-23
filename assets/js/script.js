@@ -178,6 +178,15 @@ function initializeProducts() {
 
     // ARKNIGHTS
     renderProductPanel('arknights-hacks', d.arknights?.hacks, 'arknights', 'hacks');
+
+    // STELLA SORA
+    renderProductPanel('stellasora-hacks', d.stellasora?.hacks, 'stellasora', 'hacks');
+
+    // BLUE ARCHIVE
+    renderProductPanel('bluearchive-hacks', d.bluearchive?.hacks, 'bluearchive', 'hacks');
+
+    // SEVEN DEADLY SINS
+    renderProductPanel('sds-hacks', d.sds?.hacks, 'sds', 'hacks');
 }
 
 async function loadProductsData() {
