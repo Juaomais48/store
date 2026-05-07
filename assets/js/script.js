@@ -521,64 +521,29 @@ function initializeProducts() {
     // Inicializar produtos do Duel Night Abyss
     initializeCategoryProducts('dna', 'hacks', 'Hacks e Bypass');
 
-    // Inicializar produtos do Blue Protocol
-    //initializeCategoryProducts('bp', 'hacks', 'Hacks e Bypass');
-
     // Inicializar produtos do Arknights Endfield
     initializeCategoryProducts('arknights', 'hacks', 'Hacks e Bypass');
-    
-    // Manter conteúdo original para categorias vazias
-    preserveEmptyCategories();
-}
 
-/**
- * Mantém o conteúdo original para categorias sem dados no JSON
- */
-function preserveEmptyCategories() {
-    // Para Wuwa - Lunites e Passes
-    const wuwaLunites = document.querySelector('#wuwa .product-list h4:contains("Lunites")')?.closest('.product-list');
-    const wuwaPasses = document.querySelector('#wuwa .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
+    // Inicializar produtos do Neverness to Everness
+    initializeCategoryProducts('nte', 'hacks', 'Hacks e Bypass');
 
-    const dnaPlumulas = document.querySelector('#dna .product-list h4:contains("Plumulas")')?.closest('.product-list');
-    const dnaPasses = document.querySelector('#dna .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
+    // Inicializar produtos do Seven Deadly Sins: Origin
+    initializeCategoryProducts('sds', 'hacks', 'Hacks e Bypass');
 
-    const bpOrbesRosa = document.querySelector('#bp .product-list h4:contains("Orbes Rosa")')?.closest('.product-list');
-    const bpPasses = document.querySelector('#bp .product-list h4:contains("Passes e Assinaturas")')?.closest('.product-list');
-    
-    // Verificar se essas categorias têm dados no JSON
-    const wuwaHasLunites = productsData.wuwa?.lunites?.length > 0;
-    const wuwaHasPasses = productsData.wuwa?.passes?.length > 0;
+    // Inicializar produtos do Solo Leveling: Arise
+    initializeCategoryProducts('sla', 'hacks', 'Hacks e Bypass');
 
-    const dnaHasPlumulas = productsData.dna?.plumulas?.length > 0;
-    const dnaHasPasses = productsData.dna?.passes?.length > 0;
+    // Inicializar produtos do Mongil: Star Dive
+    initializeCategoryProducts('msd', 'hacks', 'Hacks e Bypass');
 
-    const bpHasOrbesRosa = productsData.bp?.orbes?.length > 0;
-    const bpHasPasses = productsData.bp?.passes?.length > 0;
+    // Inicializar produtos do Blue Archive
+    initializeCategoryProducts('ba', 'hacks', 'Hacks e Bypass');
 
-    // Restaurar conteúdo original se não houver dados no JSON
-    if (wuwaLunites && !wuwaHasLunites) {
-        wuwaLunites.innerHTML = '<h4>Lunites</h4><div class="product-none"><p>Em Breve.</p></div>';
-    }
-    
-    if (wuwaPasses && !wuwaHasPasses) {
-        wuwaPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
-    }
+    // Inicializar produtos do Stella Sora
+    initializeCategoryProducts('sts', 'hacks', 'Hacks e Bypass');
 
-    if (dnaPlumulas && !dnaHasPlumulas) {
-        dnaPlumulas.innerHTML = '<h4>Plumulas</h4><div class="product-none"><p>Em Breve.</p></div>';
-    }
-
-    if (dnaPasses && !dnaHasPasses) {
-        dnaPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
-    }
-
-    if (bpOrbesRosa && !bpHasOrbesRosa) {
-        bpOrbesRosa.innerHTML = '<h4>Orbes Rosa</h4><div class="product-none"><p>Em Breve.</p></div>';
-    }
-
-    if (bpPasses && !bpHasPasses) {
-        bpPasses.innerHTML = '<h4>Passes e Assinaturas</h4><div class="product-none"><p>Em Breve.</p></div>';
-    }
+    // Inicializar produtos do Tower of Fantasy
+    initializeCategoryProducts('tof', 'hacks', 'Hacks e Bypass');
 }
 
 /**
