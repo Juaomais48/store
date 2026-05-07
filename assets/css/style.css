@@ -215,6 +215,63 @@ body {
     background-color: rgba(42, 42, 42, 0.8);
 }
 
+.category-card.nte {
+    background-image: url('/store/assets/images/webp/nte.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.category-card.sds {
+    background-image: url('/store/assets/images/webp/7ds.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.category-card.ba {
+    background-image: url('/store/assets/images/webp/ba.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.category-card.msd {
+    background-image: url('/store/assets/images/webp/msd.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.category-card.sla {
+    background-image: url('/store/assets/images/webp/sla.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.category-card.sts {
+    background-image: url('/store/assets/images/webp/sts.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+.category-card.tof {
+    background-image: url('/store/assets/images/webp/tof.webp');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+
 /* Efeito de redução de opacidade da imagem de fundo ao passar o mouse */
 .category-card:hover {
     background-color: rgba(42, 42, 42, 0.5);
