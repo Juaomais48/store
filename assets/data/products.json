@@ -121,7 +121,7 @@
         "price": 21.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 21.90},
+          {"text": "1 dia", "price": 21.90},
           {"text": "7 dias", "price": 42.90},
           {"text": "30 dias", "price": 84.90}
         ]
@@ -134,7 +134,7 @@
         "hasTray": true,
         "durations": [
           {"text": "1 dia", "price": 15.90},
-          {"text": "3 dias", "price": 21.90},
+          {"text": "3 dias", "price": 25.90},
           {"text": "7 dias", "price": 36.90},
           {"text": "30 dias", "price": 92.90}
         ]
@@ -226,7 +226,7 @@
         "price": 11.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 11.90},
+          {"text": "1 dia", "price": 11.90},
           {"text": "7 dias", "price": 27.90},
           {"text": "30 dias", "price": 55.90}
         ]
@@ -246,8 +246,98 @@
     ]
   },
   "wuwa": {
-    "lunites": [],
-    "passes": [],
+    "lunites": [
+      {
+        "id": "60lunites",
+        "name": "60 Lunites",
+        "image": "/store/assets/images/png/60lunites.png",
+        "bonus": "+ 60 na Primeira Recarga",
+        "oldPrice": 5.35,
+        "price": 4.60
+      },
+      {
+        "id": "300lunites",
+        "name": "300 Lunites",
+        "image": "/store/assets/images/png/300lunites.png",
+        "bonus": "+ 300 na Primeira Recarga",
+        "oldPrice": 26.95,
+        "price": 22.90
+      },
+      {
+        "id": "980lunites",
+        "name": "980 Lunites",
+        "image": "/store/assets/images/png/980lunites.png",
+        "bonus": "+ 980 na Primeira Recarga",
+        "oldPrice": 80.95,
+        "price": 66.90
+      },
+      {
+        "id": "1980lunites",
+        "name": "1.980 Lunites",
+        "image": "/store/assets/images/png/1980lunites.png",
+        "bonus": "+ 1.980 na Primeira Recarga",
+        "oldPrice": 161.95,
+        "price": 142.90
+      },
+      {
+        "id": "3280lunites",
+        "name": "3.280 Lunites",
+        "image": "/store/assets/images/png/3280lunites.png",
+        "bonus": "+ 3.280 na Primeira Recarga",
+        "oldPrice": 269.95,
+        "price": 224.90
+      },
+      {
+        "id": "6480lunites",
+        "name": "6.480 Lunites",
+        "image": "/store/assets/images/png/6480lunites.png",
+        "bonus": "+ 6.480 na Primeira Recarga",
+        "oldPrice": 539.95,
+        "price": 434.90
+      },
+      {
+        "id": "13080lunites",
+        "name": "13.080 Lunites",
+        "image": "/store/assets/images/gif/money.gif",
+        "bonus": "+ 13.080 na Primeira Recarga",
+        "oldPrice": 1079.95,
+        "price": 1060.90
+      }
+    ],
+    "passes": [
+      {
+        "id": "passe-base-wuwa",
+        "name": "Passe Base",
+        "image": "/store/assets/images/png/passe-base-wuwa.png",
+        "oldPrice": 53.95,
+        "price": 45.90,
+        "hasTray": false
+      },
+      {
+        "id": "passe-avancado-wuwa",
+        "name": "Passe Avançado",
+        "image": "/store/assets/images/png/passe-avancado-wuwa.png",
+        "oldPrice": 107.95,
+        "price": 90.90,
+        "hasTray": false
+      },
+      {
+        "id": "assinatura-lunites",
+        "name": "Assinatura de Lunites",
+        "image": "/store/assets/images/png/assinatura-lunites.png",
+        "oldPrice": 26.95,
+        "price": 23.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "30 dias", "oldPrice": 26.95, "price": 23.90},
+          {"text": "60 dias", "oldPrice": 53.89, "price": 47.80},
+          {"text": "90 dias", "oldPrice": 80.84, "price": 71.70},
+          {"text": "120 dias", "oldPrice": 107.78, "price": 95.60},
+          {"text": "150 dias", "oldPrice": 134.73, "price": 119.50},
+          {"text": "180 dias", "oldPrice": 161.68, "price": 143.40}
+        ]
+      }
+    ],
     "hacks": [
       {
         "id": "uniwaves",
@@ -256,7 +346,7 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 16.90},
+          {"text": "1 dia", "price": 16.90},
           {"text": "7 dias", "price": 38.90},
           {"text": "30 dias", "price": 79.90}
         ]
@@ -370,7 +460,7 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 16.90},
+          {"text": "1 dia", "price": 16.90},
           {"text": "7 dias", "price": 38.90},
           {"text": "30 dias", "price": 79.90}
         ]
@@ -379,7 +469,7 @@
         "id": "mintyzzz",
         "name": "Menu Minty ZZZ",
         "image": "/store/assets/images/webp/minty.webp",
-        "price": 5.00,
+        "price": 5.90,
         "hasTray": true,
         "durations": [
           {"text": "1 dia", "price": 5.90},
@@ -390,8 +480,6 @@
     ]
   },
   "dna": {
-    "plumulas": [],
-    "passes": [],
     "hacks": [
       {
         "id": "unidna",
@@ -400,7 +488,7 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 16.90},
+          {"text": "1 dia", "price": 16.90},
           {"text": "7 dias", "price": 28.90},
           {"text": "30 dias", "price": 55.90}
         ]
@@ -422,13 +510,13 @@
         "price": 10.90,
         "hasTray": true,
         "durations": [
-          {"text": "3 dia", "price": 10.90},
-          {"text": "7 dias", "price": 20.90},
+          {"text": "3 dias", "price": 10.90},
+          {"text": "7 dias", "price": 25.90},
           {"text": "30 dias", "price": 30.90}
         ]
       },
       {
-        "id": "slashwuwa",
+        "id": "slashdna",
         "name": "Menu Slash",
         "image": "/store/assets/images/png/slash.png",
         "price": 21.90,
@@ -441,27 +529,7 @@
       }
     ]
   },
-  "bp": {
-    "orbes": [],
-    "passes": [],
-    "hacks": [
-      {
-        "id": "mintybp",
-        "name": "Menu Minty BP",
-        "image": "/store/assets/images/webp/minty.webp",
-        "price": 15.90,
-        "hasTray": true,
-        "durations": [
-          {"text": "3 dia", "price": 15.90},
-          {"text": "7 dias", "price": 24.90},
-          {"text": "30 dias", "price": 50.90}
-        ]
-      }
-    ]
-  },
   "arknights": {
-    "originium": [],
-    "passes": [],
     "hacks": [
       {
         "id": "uniendfield",
@@ -470,7 +538,7 @@
         "price": 16.90,
         "hasTray": true,
         "durations": [
-          {"text": "1 dias", "price": 16.90},
+          {"text": "1 dia", "price": 16.90},
           {"text": "7 dias", "price": 38.90},
           {"text": "30 dias", "price": 79.90}
         ]
@@ -482,9 +550,44 @@
         "price": 10.90,
         "hasTray": true,
         "durations": [
-          {"text": "3 dia", "price": 10.90},
+          {"text": "3 dias", "price": 10.90},
           {"text": "7 dias", "price": 23.90},
           {"text": "30 dias", "price": 38.90}
+        ]
+      },
+      {
+        "id": "kittenfieldae",
+        "name": "Menu KittenField",
+        "image": "/store/assets/images/gif/kitten.gif",
+        "price": 58.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "KittenField - 30 dias", "price": 58.90}
+        ]
+      },
+      {
+        "id": "lumenae",
+        "name": "Menu Lumen",
+        "image": "/store/assets/images/webp/lumen.webp",
+        "price": 28.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 28.90},
+          {"text": "7 dias", "price": 53.90},
+          {"text": "30 dias", "price": 88.90}
+        ]
+      },
+      {
+        "id": "ankoe",
+        "name": "Menu Anko",
+        "image": "/store/assets/images/gif/shika.gif",
+        "price": 25.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 60.90},
+          {"text": "3 dias", "price": 25.90},
+          {"text": "7 dias", "price": 40.90},
+          {"text": "30 dias", "price": 92.90}
         ]
       },
       {
@@ -497,6 +600,179 @@
           {"text": "3 dias", "price": 21.90},
           {"text": "7 dias", "price": 32.90},
           {"text": "30 dias", "price": 53.90}
+        ]
+      }
+    ]
+  },
+  "nte": {
+    "hacks": [
+      {
+        "id": "uninte",
+        "name": "Menu UniNTE",
+        "image": "/store/assets/images/png/uni.png",
+        "price": 28.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 28.90},
+          {"text": "7 dias", "price": 50.90},
+          {"text": "30 dias", "price": 84.90}
+        ]
+      },
+      {
+        "id": "mintynte",
+        "name": "Menu Minty NTE",
+        "image": "/store/assets/images/webp/minty.webp",
+        "price": 10.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 10.90},
+          {"text": "7 dias", "price": 27.90},
+          {"text": "30 dias", "price": 50.90}
+        ]
+      },
+      {
+        "id": "lumennte",
+        "name": "Menu Lumen",
+        "image": "/store/assets/images/webp/lumen.webp",
+        "price": 25.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 25.90},
+          {"text": "7 dias", "price": 40.90},
+          {"text": "30 dias", "price": 92.90}
+        ]
+      },
+      {
+        "id": "kinunte",
+        "name": "Menu Kinu",
+        "image": "/store/assets/images/gif/shika.gif",
+        "price": 25.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 60.90},
+          {"text": "3 dias", "price": 25.90},
+          {"text": "7 dias", "price": 40.90},
+          {"text": "30 dias", "price": 92.90}
+        ]
+      }
+    ]
+  },
+  "sds": {
+    "hacks": [
+      {
+        "id": "unids",
+        "name": "Menu UniDS",
+        "image": "/store/assets/images/png/uni.png",
+        "price": 11.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 11.90},
+          {"text": "7 dias", "price": 27.90},
+          {"text": "30 dias", "price": 42.90}
+        ]
+      },
+      {
+        "id": "lumen7ds",
+        "name": "Menu Lumen",
+        "image": "/store/assets/images/webp/lumen.webp",
+        "price": 28.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 28.90},
+          {"text": "7 dias", "price": 53.90},
+          {"text": "30 dias", "price": 88.90}
+        ]
+      }
+    ]
+  },
+  "sla": {
+    "hacks": [
+      {
+        "id": "lumensla",
+        "name": "Menu Lumen",
+        "image": "/store/assets/images/webp/lumen.webp",
+        "price": 28.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 28.90},
+          {"text": "7 dias", "price": 53.90},
+          {"text": "30 dias", "price": 88.90}
+        ]
+      }
+    ]
+  },
+  "msd": {
+    "hacks": [
+      {
+        "id": "unimsd",
+        "name": "Menu UniStarDive",
+        "image": "/store/assets/images/png/uni.png",
+        "price": 16.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 16.90},
+          {"text": "7 dias", "price": 28.90},
+          {"text": "30 dias", "price": 72.90}
+        ]
+      },
+      {
+        "id": "lumenmsd",
+        "name": "Menu Lumen",
+        "image": "/store/assets/images/webp/lumen.webp",
+        "price": 23.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "3 dias", "price": 23.90},
+          {"text": "7 dias", "price": 44.90},
+          {"text": "30 dias", "price": 60.90}
+        ]
+      }
+    ]
+  },
+  "ba": {
+    "hacks": [
+      {
+        "id": "konokaba",
+        "name": "Menu Konoka",
+        "image": "/store/assets/images/png/konoka.png",
+        "price": 10.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 10.90},
+          {"text": "7 dias", "price": 18.90},
+          {"text": "30 dias", "price": 25.90}
+        ]
+      }
+    ]
+  },
+  "sts": {
+    "hacks": [
+      {
+        "id": "sorokasts",
+        "name": "Menu Soroka",
+        "image": "/store/assets/images/png/soroka.png",
+        "price": 10.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 10.90},
+          {"text": "7 dias", "price": 18.90},
+          {"text": "30 dias", "price": 25.90}
+        ]
+      }
+    ]
+  },
+  "tof": {
+    "hacks": [
+      {
+        "id": "toofli",
+        "name": "Menu Toofli",
+        "image": "/store/assets/images/png/toofli.png",
+        "price": 10.90,
+        "hasTray": true,
+        "durations": [
+          {"text": "1 dia", "price": 10.90},
+          {"text": "7 dias", "price": 18.90},
+          {"text": "30 dias", "price": 25.90}
         ]
       }
     ]
