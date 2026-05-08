@@ -27,7 +27,7 @@ const taxasJuros = {
 // ============================================
 
 /**
- * Exibe produtos de uma categoria específica
+ * Exibe produtos de uma categoria específica e ativa a estante de livros
  */
 function showProductsC(category) {
     document.querySelectorAll('.category-card').forEach(card => {
@@ -40,7 +40,105 @@ function showProductsC(category) {
 
     event.target.closest('.category-card').classList.add('active');
     document.getElementById(category).classList.add('active');
+
+    // Ativar modo estante
+    activateBookshelf(category);
     smoothScrollToTargetHome();
+}
+
+/**
+ * Contrai os cards em uma estante de 5 itens sobrepostos
+ */
+function activateBookshelf(selectedCategory) {
+    const categoriesEl = document.querySelector('.categories');
+    const allCards = Array.from(categoriesEl.querySelectorAll('.category-card:not(.more-games-btn)'));
+
+    // Quantidade máxima de cards visíveis na estante
+    const MAX_VISIBLE = 6;
+
+    // Se já está no modo estante, só atualiza qual está ativo
+    if (categoriesEl.classList.contains('bookshelf-mode')) {
+        allCards.forEach(card => card.classList.remove('active'));
+        const activeCard = allCards.find(c => c.getAttribute('onclick')?.includes(`'${selectedCategory}'`));
+        if (activeCard) {
+            activeCard.classList.add('active');
+            // Garante que o card ativo esteja entre os visíveis
+            ensureActiveVisible(categoriesEl, allCards, activeCard, MAX_VISIBLE);
+        }
+        return;
+    }
+
+    // Entrar no modo estante
+    categoriesEl.classList.add('bookshelf-mode');
+
+    // Esconde os cards além do limite
+    allCards.forEach((card, i) => {
+        card.style.display = i < MAX_VISIBLE ? '' : 'none';
+    });
+
+    // Criar botão "Mais Jogos" se ainda não existir
+    if (!document.getElementById('moreGamesBtn')) {
+        const moreBtn = document.createElement('div');
+        moreBtn.className = 'category-card more-games-btn';
+        moreBtn.id = 'moreGamesBtn';
+        moreBtn.onclick = deactivateBookshelf;
+        moreBtn.innerHTML = `
+            <span class="more-games-plus">+</span>
+            <span class="more-games-label">mais jogos</span>
+        `;
+        categoriesEl.appendChild(moreBtn);
+    } else {
+        document.getElementById('moreGamesBtn').style.display = 'flex';
+    }
+
+    // Garante que o card ativo está visível
+    const activeCard = allCards.find(c => c.getAttribute('onclick')?.includes(`'${selectedCategory}'`));
+    if (activeCard) {
+        ensureActiveVisible(categoriesEl, allCards, activeCard, MAX_VISIBLE);
+    }
+}
+
+/**
+ * Se o card ativo está fora dos 5 visíveis,
+ * troca ele com o último visível para entrar na janela
+ */
+function ensureActiveVisible(categoriesEl, allCards, activeCard, maxVisible) {
+    const idx = allCards.indexOf(activeCard);
+    if (idx >= maxVisible) {
+        // Esconde todos
+        allCards.forEach(c => c.style.display = 'none');
+        // Mostra os (maxVisible - 1) primeiros + o ativo no final
+        const others = allCards.filter(c => c !== activeCard).slice(0, maxVisible - 1);
+        others.forEach(c => c.style.display = '');
+        activeCard.style.display = '';
+        // Move o ativo para antes do botão "mais jogos"
+        const moreBtn = document.getElementById('moreGamesBtn');
+        categoriesEl.insertBefore(activeCard, moreBtn);
+    }
+}
+
+/**
+ * Desativa o modo estante e volta ao grid normal
+ */
+function deactivateBookshelf() {
+    const categoriesEl = document.querySelector('.categories');
+    const allCards = Array.from(categoriesEl.querySelectorAll('.category-card:not(.more-games-btn)'));
+
+    // Restaura a ordem original e mostra todos
+    allCards.sort((a, b) => {
+        return (a.dataset.originalIndex || 0) - (b.dataset.originalIndex || 0);
+    }).forEach((card, i) => {
+        card.style.display = '';
+        card.classList.remove('active');
+        categoriesEl.insertBefore(card, document.getElementById('moreGamesBtn'));
+    });
+
+    document.querySelectorAll('.products-section').forEach(s => s.classList.remove('active'));
+
+    categoriesEl.classList.remove('bookshelf-mode');
+
+    const moreBtn = document.getElementById('moreGamesBtn');
+    if (moreBtn) moreBtn.style.display = 'none';
 }
 
 /**
@@ -660,6 +758,11 @@ window.onclick = function(event) {
  * Inicialização quando o DOM estiver pronto
  */
 document.addEventListener('DOMContentLoaded', function() {
+    // Salvar índice original de cada category-card para restaurar ordem na estante
+    document.querySelectorAll('.categories .category-card').forEach((card, i) => {
+        card.dataset.originalIndex = i;
+    });
+
     // Carregar dados dos produtos
     loadProductsData();
     
