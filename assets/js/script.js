@@ -54,7 +54,7 @@ function activateBookshelf(selectedCategory) {
     const allCards = Array.from(categoriesEl.querySelectorAll('.category-card:not(.more-games-btn)'));
 
     // Quantidade máxima de cards visíveis na estante
-    const MAX_VISIBLE = 6;
+    const MAX_VISIBLE = 7;
 
     // Se já está no modo estante, só atualiza qual está ativo
     if (categoriesEl.classList.contains('bookshelf-mode')) {
@@ -87,8 +87,6 @@ function activateBookshelf(selectedCategory) {
             <span class="more-games-label">mais jogos</span>
         `;
         categoriesEl.appendChild(moreBtn);
-    } else {
-        document.getElementById('moreGamesBtn').style.display = 'flex';
     }
 
     // Garante que o card ativo está visível
@@ -138,7 +136,7 @@ function deactivateBookshelf() {
     categoriesEl.classList.remove('bookshelf-mode');
 
     const moreBtn = document.getElementById('moreGamesBtn');
-    if (moreBtn) moreBtn.style.display = 'none';
+    if (moreBtn) moreBtn.remove();
 }
 
 /**

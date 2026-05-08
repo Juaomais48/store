@@ -328,7 +328,7 @@ body {
     width: 160px;
     height: 80px;
     min-height: unset;
-    padding: 6px 10px;
+    padding: 0px 10px;
     border-radius: 10px;
     border-width: 2px;
     display: flex;
