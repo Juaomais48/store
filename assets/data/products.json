@@ -494,16 +494,6 @@
         ]
       },
       {
-        "id": "meowabyss",
-        "name": "Menu Meow Abyss",
-        "image": "/store/assets/images/gif/kitten.gif",
-        "price": 139.90,
-        "hasTray": true,
-        "durations": [
-          {"text": "Meow Abyss - Vitalício", "price": 139.90}
-        ]
-      },
-      {
         "id": "mintydna",
         "name": "Menu Minty DNA",
         "image": "/store/assets/images/webp/minty.webp",

@@ -608,7 +608,7 @@ function initializeProducts() {
     
     // Inicializar produtos do Wuthering Waves
     initializeCategoryProducts('wuwa', 'lunites', 'Lunites');
-    initializeCategoryProducts('wuwa', 'passes', 'Passes e Suprimentos');
+    initializeCategoryProducts('wuwa', 'passes', 'Passes e Assinaturas');
     initializeCategoryProducts('wuwa', 'hacks', 'Hacks e Bypass');
     
     // Inicializar produtos do Zenless Zone Zero
