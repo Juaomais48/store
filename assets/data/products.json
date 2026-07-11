@@ -481,7 +481,7 @@
         "id": "mintyzzz",
         "name": "Menu Minty ZZZ",
         "image": "/store/assets/images/webp/minty.webp",
-        "price": 5.90,
+        "price": 8.90,
         "hasTray": true,
         "durations": [
           {"text": "1 dia", "price": 8.90},
@@ -493,7 +493,7 @@
         "id": "mintyzzzmobile",
         "name": "Menu Minty ZZZ Mobile",
         "image": "/store/assets/images/webp/minty.webp",
-        "price": 5.90,
+        "price": 11.90,
         "hasTray": true,
         "durations": [
           {"text": "1 dia", "price": 11.90},
